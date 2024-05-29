@@ -1,8 +1,33 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+const japaneseRobot = localFont({
+  src: [
+    {
+      path: '../public/Japanese Robot.ttf',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../public/Japanese Robot Italic.ttf',
+      weight: '400',
+      style: 'italic'
+    }
+  ],
+  variable: '--font-japaneseRobot'
+})
+
+const akiraExpanded = localFont({
+  src: [
+    {
+      path: '../public/Akira Expanded Demo.otf',
+      weight: '400',
+      style: 'normal'
+    }
+  ],
+  variable: '--font-akiraExpanded'
+})
 
 export const metadata: Metadata = {
   title: "Brandon Monge",
@@ -16,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${japaneseRobot.variable} ${akiraExpanded.variable}`}>{children}</body>
     </html>
   );
 }

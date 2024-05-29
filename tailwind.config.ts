@@ -16,6 +16,10 @@ const config: Config = {
       colors: {
         "onyx-black": "#0F0F0F",
         "scarlet-red": "#FF2400",
+      },
+      fontFamily: {
+        japaneseRobot: ['var(--font-japaneseRobot)'],
+        akiraExpanded: ['var(--font-akiraExpanded)']
       }
     },
   },
