@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local'
+import SmoothScroll from '@/components/SmoothScroll'
 
 const japaneseRobot = localFont({
   src: [
@@ -41,7 +42,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${japaneseRobot.variable} ${akiraExpanded.variable}`}>{children}</body>
+      <body className={`${japaneseRobot.variable} ${akiraExpanded.variable}`}>
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }
