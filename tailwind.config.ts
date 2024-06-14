@@ -20,7 +20,7 @@ const config: Config = {
       fontFamily: {
         japaneseRobot: ['var(--font-japaneseRobot)'],
         akiraExpanded: ['var(--font-akiraExpanded)']
-      }
+      },
     },
   },
   plugins: [],

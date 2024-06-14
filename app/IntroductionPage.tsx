@@ -1,49 +1,66 @@
 'use client'
-
-import Image from "next/image";
-import React_Logo_SVG from "../public/react-logo.svg"
 import { useEffect } from "react";
-import SwitchColorScroll from "@/components/SwitchColorScroll";
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import Card from "@/components/Card";
+
+gsap.registerPlugin(ScrollTrigger);
+
+let Card_Info = [{
+    title: "React",
+    elements: ["Next", "Node", "GSAP"]
+},
+{
+    title: "Webflow",
+    elements: ["Structure", "CMS", "Analytics"]
+},
+{
+    title: "Figma",
+    elements: ["Mockups", "Design", "Plugins"]
+},
+{
+    title: "Soft",
+    elements: ["Communication", "Creativity", "Adaptability"]
+},
+{
+    title: "Hobbies",
+    elements: ["Sport", "Games", "Travel"]
+}]
 
 export default function IntroductionPage() {
     useEffect(() => {
-        SwitchColorScroll()
+        let tl_default = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#intro_section',
+                start: "top top",
+                end: "bottom+=500 center",
+                scrub: 1,
+                pin: true,
+                pinSpacing: true,
+                pinnedContainer: "intro_section",
+                pinType: "fixed"
+            }
+        })
+        tl_default.to("#cards", {
+            scrollTrigger: {
+                trigger: "#intro_section",
+                scrub: 1,
+            },
+            x: "-150%",
+        })
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
     }, [])
-    return (<div id="introduction" className="relative w-screen h-screen bg-transparent overflow-hidden">
-        <div id="cards" className="relative left-[50%] h-full flex gap-14  items-center">
-            <div id="card" className="relative w-[352px] h-[512px] bg-[radial-gradient(circle,#FFFFFF,#999999)] rounded-[20px] p-[15px]">
-                <div className="relative flex flex-col justify-around items-center w-full h-full bg-onyx-black bg-[url('../public/noisy-background.png')] rounded-[5px] overflow-hidden">
-                    <Image src={React_Logo_SVG} alt="react-logo"></Image>
-                    <h2 className="text-[42px] font-akiraExpanded">REACT</h2>
-                    <div className="flex gap-5">
-                        <h3 className="text-[32px] font-japaneseRobot">React</h3>
-                        <h3 className="text-[32px] font-japaneseRobot">Next</h3>
-                        <h3 className="text-[32px] font-japaneseRobot">Node</h3>
+    return (
+        <section id="intro_section" className="relative w-screen h-screen overflow-hidden">
+            <div id="intro_container" className="relative w-full h-full">
+                <div id="intro_wrapper" className="relative w-full h-full">
+                    <div id="cards" className="relative h-full flex gap-14 items-center left-[100%]">
+                        {Card_Info.map((el, index) => <Card key={index} title={el.title} elements={el.elements} />)}
                     </div>
                 </div>
             </div>
-            <div id="card" className="relative w-[352px] h-[512px] bg-[radial-gradient(circle,#FFFFFF,#999999)] rounded-[20px] p-[15px]">
-                <div className="relative flex flex-col justify-around items-center w-full h-full bg-onyx-black bg-[url('../public/noisy-background.png')] rounded-[5px] overflow-hidden">
-                    <Image src={React_Logo_SVG} alt="react-logo"></Image>
-                    <h2 className="text-[42px] font-akiraExpanded">REACT</h2>
-                    <div className="flex gap-5">
-                        <h3 className="text-[32px] font-japaneseRobot">React</h3>
-                        <h3 className="text-[32px] font-japaneseRobot">Next</h3>
-                        <h3 className="text-[32px] font-japaneseRobot">Node</h3>
-                    </div>
-                </div>
-            </div>
-            <div id="card" className="relative w-[352px] h-[512px] bg-[radial-gradient(circle,#FFFFFF,#999999)] rounded-[20px] p-[15px]">
-                <div className="relative flex flex-col justify-around items-center w-full h-full bg-onyx-black bg-[url('../public/noisy-background.png')] rounded-[5px] overflow-hidden">
-                    <Image src={React_Logo_SVG} alt="react-logo"></Image>
-                    <h2 className="text-[42px] font-akiraExpanded">REACT</h2>
-                    <div className="flex gap-5">
-                        <h3 className="text-[32px] font-japaneseRobot">React</h3>
-                        <h3 className="text-[32px] font-japaneseRobot">Next</h3>
-                        <h3 className="text-[32px] font-japaneseRobot">Node</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>)
+        </section>
+    )
 }
