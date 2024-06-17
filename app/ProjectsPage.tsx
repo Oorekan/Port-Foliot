@@ -231,14 +231,14 @@ export default function ProjectPage() {
                             <div className="absolute w-full bottom-0 z-10">
                                 <Image
                                     id="projects_picture"
-                                    className="mx-[27%]"
+                                    className="lg:mx-[27%] mx-[15%]"
                                     src={Project_Picture}
                                     width={1280}
                                     height={0}
                                     alt="projects-picture">
                                 </Image>
                             </div>
-                            <div id="first-project-link" className="group z-10 absolute w-[512px] h-[256px] rounded-[30px] top-0 left-0 mt-[4.5%] ml-[21.65%] overflow-hidden">
+                            <div id="first-project-link" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[4.5%] lg:ml-[21.65%] mt-[40%] ml-[30%] overflow-hidden">
                                 <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={FirstProject} alt="first-project-picture" />
@@ -248,7 +248,7 @@ export default function ProjectPage() {
                                     </div>
                                 </a>
                             </div>
-                            <div id="second-project-link" className="group z-10 absolute w-[512px] h-[256px] rounded-[30px] top-0 left-0 mt-[21.5%] ml-[9.2%] overflow-hidden">
+                            <div id="second-project-link" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[21.5%] lg:ml-[9.2%] mt-[80%] ml-[5%] overflow-hidden">
                                 <a target="_blank" href="https://kbox-preprod.webflow.io/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={SecondProject} alt="second-project-picture" />
@@ -258,7 +258,7 @@ export default function ProjectPage() {
                                     </div>
                                 </a>
                             </div>
-                            <div id="third-project-link" className="group z-10 absolute w-[512px] h-[256px] rounded-[30px] bottom-0 right-0 mb-[4.5%] mr-[14.3%] overflow-hidden">
+                            <div id="third-project-link" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] bottom-0 right-0 lg:mb-[4.5%] lg:mr-[14.3%] mb-[60%] mr-[5%] overflow-hidden">
                                 <a target="_blank" href="https://www.ingeva.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={ThirdProject} alt="third-project-picture" />
