@@ -1,8 +1,12 @@
 'use client'
-import Image from "next/image"
+
 import React, { useEffect } from "react"
+import Image from "next/image"
 import React_Logo_SVG from "../public/react-logo.svg"
-import ScrollAnimation from "@/components/ScrollAnimation";
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 type CardProps = {
     title: string;
@@ -11,7 +15,20 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ title, elements }) => {
     useEffect(() => {
-        ScrollAnimation()
+        //* -------------------- CARD -------------------- *//
+        let tl_card = gsap.timeline({})
+        tl_card.fromTo("#elements", {
+            x: 150,
+        }, {
+            x: -150,
+            repeat: -1,
+            duration: 5,
+            ease: 'linear'
+        })
+        //* -------------------- KILL -------------------- *//
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
     }, [])
     return (
         <>

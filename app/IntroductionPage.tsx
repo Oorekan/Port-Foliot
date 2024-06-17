@@ -37,7 +37,7 @@ export default function IntroductionPage() {
                 scrub: 1,
                 pin: true,
                 pinSpacing: true,
-                pinnedContainer: "intro_section",
+                pinnedContainer: "#intro_section",
                 pinType: "fixed"
             }
         })
@@ -53,7 +53,7 @@ export default function IntroductionPage() {
         };
     }, [])
     return (
-        <section id="intro_section" className="relative w-screen h-screen overflow-hidden">
+        <section id="intro_section" className="relative w-screen h-screen max-w-full overflow-hidden">
             <div id="intro_container" className="relative w-full h-full">
                 <div id="intro_wrapper" className="relative w-full h-full">
                     <div id="cards" className="relative h-full flex gap-14 items-center left-[100%]">
