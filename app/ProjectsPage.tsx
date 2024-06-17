@@ -23,7 +23,6 @@ export default function ProjectPage() {
                 scrub: true,
                 start: "-=50%",
                 end: 'bottom bottom',
-                markers: true
             },
             background: "#0F0F0F",
         })
