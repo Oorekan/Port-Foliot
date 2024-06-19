@@ -41,6 +41,5 @@ export default function Amaryllis({ id, gradientColor1, gradientColor2, stopColo
                 </linearGradient>
             </defs>
         </svg>
-
     )
 }
