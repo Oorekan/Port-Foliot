@@ -1,4 +1,5 @@
 'use client'
+
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
@@ -6,538 +7,535 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollAnimation() {
 
-    // //*-------------------- WHITE GRID ANIMATION --------------------*//
-    // let tl_white_grid = gsap.timeline({})
-    // tl_white_grid.fromTo("#white_grid", {
-    //     opacity: 0,
-    // }, {
-    //     opacity: 1,
-    //     duration: 2,
-    //     ease: 'linear'
-    // })
-
-    // //* -------------------- KEYWORDS #1 ANIMATION -------------------- *//
-    // let tl_keywords_1 = gsap.timeline({})
-    // tl_keywords_1.fromTo("#keyword_1", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // })
-    // tl_keywords_1.fromTo("#keyword_2", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // }, ">-0.3")
-    // tl_keywords_1.fromTo("#keyword_3", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // }, ">-0.3")
-
-    // //* -------------------- KEYWORDS #2 ANIMATION -------------------- *//
-    // let tl_keywords_2 = gsap.timeline({})
-    // tl_keywords_2.fromTo("#keyword_4", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    //     duration: 0.7,
-    // })
-    // tl_keywords_2.fromTo("#keyword_5", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // }, ">-0.3")
-    // tl_keywords_2.fromTo("#keyword_6", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // }, ">-0.3")
-
-    // //* -------------------- JAPANESE WORDS ANIMATION -------------------- *//
-    // let tl_japanese_word = gsap.timeline({})
-    // tl_japanese_word.fromTo("#japanese_word_1", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    //     duration: 0.7,
-    // })
-    // tl_japanese_word.fromTo("#japanese_word_2", {
-    //     y: -50,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // }, ">-0.3")
-
-    // //* -------------------- RED LINES ANIMATION -------------------- *//
-    // let tl_red_lines = gsap.timeline({})
-    // tl_red_lines.fromTo("#double_red_line_1", {
-    //     x: -50,
-    //     opacity: 0,
-    //     scale: 0
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1
-    // })
-    // tl_red_lines.fromTo("#double_red_line_2", {
-    //     x: -50,
-    //     opacity: 0,
-    //     scale: 0
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1
-    // }, ">-0.3")
-    // tl_red_lines.fromTo("#double_red_line_3", {
-    //     x: -50,
-    //     opacity: 0,
-    //     scale: 0
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1
-    // }, ">-0.3")
-    // tl_red_lines.fromTo("#red_line_1", {
-    //     x: -50,
-    //     opacity: 0,
-    //     scale: 0
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1
-    // }, ">-0.3")
-
-    // //* -------------------- WHITE LINES ANIMATION -------------------- *//
-    // let tl_white_lines = gsap.timeline({})
-    // tl_white_lines.fromTo("#double_white_line_1", {
-    //     x: 50,
-    //     opacity: 0,
-    //     scale: 0
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1
-    // })
-    // tl_white_lines.fromTo("#double_white_line_2", {
-    //     x: 50,
-    //     opacity: 0,
-    //     scale: 0
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1
-    // }, ">-0.3")
-    // tl_white_lines.fromTo("#white_line_1", {
-    //     x: 50,
-    //     opacity: 0,
-    //     scale: 0
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1
-    // }, ">-0.3")
-
-    // //* -------------------- PROFILE PICTURE ANIMATION -------------------- *//
-    // let tl_profile_picture = gsap.timeline({})
-    // tl_profile_picture.fromTo("#profile_picture", {
-    //     y: '10%',
-    //     opacity: 0,
-    // }, {
-    //     y: '0%',
-    //     opacity: 1,
-    // })
-
-    // //* -------------------- RED AMARYLLIS ANIMATION -------------------- *//
-    // let tl_red_amaryllis = gsap.timeline({})
-    // tl_red_amaryllis.fromTo("#red_amaryllis_1", {
-    //     rotate: 50,
-    //     opacity: 0,
-    // }, {
-    //     rotate: 0,
-    //     opacity: 1,
-    // })
-    // tl_red_amaryllis.fromTo("#red_amaryllis_2", {
-    //     rotate: 50,
-    //     opacity: 0,
-    // }, {
-    //     rotate: 0,
-    //     opacity: 1,
-    // }, ">-0.3")
-
-    // //* -------------------- WHITE AMARYLLIS ANIMATION -------------------- *//
-    // let tl_white_amaryllis = gsap.timeline({})
-    // tl_white_amaryllis.fromTo("#white_amaryllis_1", {
-    //     rotate: 50,
-    //     opacity: 0,
-    // }, {
-    //     rotate: 0,
-    //     opacity: 1,
-    //     delay: 0.6
-    // })
-
-    // //* -------------------- CRESCENT MOON ANIMATION -------------------- *//
-    // let tl_crescent_moon = gsap.timeline({})
-    // tl_crescent_moon.fromTo("#crescent_moon", {
-    //     y: '-15%',
-    //     opacity: 0,
-    // }, {
-    //     y: '0%',
-    //     opacity: 1,
-    // })
-
-    // //* -------------------- WHITE SPARKLES ANIMATION -------------------- *//
-    // let tl_white_sparkles = gsap.timeline({})
-    // tl_white_sparkles.fromTo("#white_sparkle_1", {
-    //     rotate: -50,
-    //     opacity: 0,
-    // }, {
-    //     rotate: 0,
-    //     opacity: 1,
-    // })
-    // tl_white_sparkles.fromTo("#white_sparkle_2", {
-    //     rotate: -50,
-    //     opacity: 0,
-    // }, {
-    //     rotate: 0,
-    //     opacity: 1,
-    // }, ">-0.3")
-
-    // //* -------------------- RED SPARKLES ANIMATION -------------------- *//
-    // let tl_red_sparkles = gsap.timeline({})
-    // tl_red_sparkles.fromTo("#red_sparkle_1", {
-    //     rotate: -50,
-    //     opacity: 0,
-    // }, {
-    //     rotate: 0,
-    //     opacity: 1,
-    // })
-
-    // //* -------------------- CONTACT ANIMATION -------------------- *//
-    // let tl_contact = gsap.timeline({})
-    // tl_contact.fromTo("#contact", {
-    //     x: 20,
-    //     opacity: 0,
-    // }, {
-    //     x: 0,
-    //     opacity: 1,
-    // })
-
-    // //* -------------------- NAMES ANIMATION -------------------- *//
-    // let tl_names = gsap.timeline({})
-    // tl_names.fromTo("#first_name", {
-    //     y: '10%',
-    //     opacity: 0,
-    // }, {
-    //     y: '0%',
-    //     opacity: 1,
-    // })
-    // tl_names.fromTo("#last_name", {
-    //     y: '10%',
-    //     opacity: 0,
-    // }, {
-    //     y: '0%',
-    //     opacity: 1,
-    // }, ">-0.3")
-
-    //* -------------------- INTRODUCTION PAGE TRANSITION ANIMATION -------------------- *//
-    let tl_introduction_page_transition = gsap.timeline({})
-    tl_introduction_page_transition.to("#background", {
+    //* -------------------- BACKGROUND COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_bg_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
-        background: "#FF2400",
+    });
+
+    tl_intro_bg_color.to("#background", {
+        backgroundColor: "#FF2400",
+    });
+
+    let tl_projects_bg_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_bg_color.to("#background", {
+        backgroundColor: "#0F0F0F",
+    });
+
+    //* -------------------- RED GRADIENT COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_red_gradient_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
+            scrub: true,
+        },
     })
-    tl_introduction_page_transition.to("#gradientStop1_red", {
-        scrollTrigger: {
-            trigger: "#intro_section",
-            scrub: true,
-            end: "-=10%"
-        },
+
+    tl_intro_red_gradient_color.to("#gradientStop1_red", {
         stopColor: "white",
-        duration: 1
     }).to("#gradientStop2_red", {
-        scrollTrigger: {
-            trigger: "#intro_section",
-            scrub: true,
-            end: "-=10%"
-        },
         stopColor: "#999999",
-        duration: 1
+    })
+
+    let tl_projects_red_gradient_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
     });
-    tl_introduction_page_transition.to("#gradientStop1_white", {
+
+    tl_projects_red_gradient_color.to("#gradientStop1_red", {
+        stopColor: "#FF2400",
+    }).to("#gradientStop2_red", {
+        stopColor: "#991600",
+    });
+
+    //* -------------------- WHITE GRADIENT COLOR PAGE TRANSITION ANIMATION -------------------- *//
+    let tl_intro_white_gradient_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_white_gradient_color.to("#gradientStop1_white", {
         stopColor: "#0F0F0F",
-        duration: 1
     }).to("#gradientStop2_white", {
-        scrollTrigger: {
-            trigger: "#intro_section",
-            scrub: true,
-            end: "-=10%"
-        },
         stopColor: "#757575",
-        duration: 1
+    })
+
+    let tl_projects_white_gradient_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
     });
-    tl_introduction_page_transition.to("#primaryColor_red", {
+
+    tl_projects_white_gradient_color.to("#gradientStop1_white", {
+        stopColor: "white",
+    }).to("#gradientStop2_white", {
+        stopColor: "#999999",
+    });
+
+    //* -------------------- RED PRIMARY COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_red_primary_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_red_primary_color.to("#primaryColor_red", {
         fill: "white",
-        duration: 1
     })
-    // tl_introduction_page_transition.to("#primaryColor_white", {
+
+    let tl_projects_red_primary_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_red_primary_color.to("#primaryColor_red", {
+        fill: "#FF2400",
+    })
+
+    //* -------------------- WHITE COLOR PAGE TRANSITION ANIMATION -------------------- *//
+    // let tl_white_color_page_transition = gsap.timeline({
     //     scrollTrigger: {
-    //         trigger: "#intro_section",
     //         scrub: true,
-    //         end: "-=10%"
     //     },
-    //     fill: "#FF2400",
-    //     duration: 1
     // })
-    tl_introduction_page_transition.to("#primaryColor_black", {
+
+    // tl_white_color_page_transition.to("#primaryColor_white", {
+    //     trigger: "#intro_section",
+    //     fill: "#FF2400",
+    // }).to("#primaryColor_white", {
+    //     trigger: "#projects_section",
+    //     fill: "white",
+    // })
+
+    //* -------------------- BLACK PRIMARY COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_black_primary_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_black_primary_color.to("#primaryColor_black", {
         fill: "#0F0F0F",
-        duration: 1
     })
-    tl_introduction_page_transition.to("#contact", {
+
+    let tl_projects_black_primary_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_black_primary_color.to("#primaryColor_black", {
+        fill: "white",
+    })
+
+    //* -------------------- CONTACT COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_contact_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_contact_color.to("#contact", {
         backgroundImage: "linear-gradient(to top, white, #999999)",
-        duration: 1
     })
-    tl_introduction_page_transition.to("#first_name", {
+
+    let tl_projects_contact_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_contact_color.to("#contact", {
+        backgroundImage: "linear-gradient(to top, #FF2400, #991600)",
+    })
+
+    //* -------------------- FIRST NAME COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_first_name_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_first_name_color.to("#first_name", {
         backgroundImage: "linear-gradient(to top, white, #999999)",
-        duration: 1
     })
-    tl_introduction_page_transition.to("#keyword_1", {
+
+    let tl_projects_first_name_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_first_name_color.to("#first_name", {
+        backgroundImage: "linear-gradient(to top, #FF2400, #991600)",
+    })
+
+    //* -------------------- KEYWORD #1 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_keyword_1_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_keyword_1_color.to("#keyword_1", {
         backgroundImage: "linear-gradient(to bottom, #0F0F0F, #757575)",
-        duration: 1
     })
-    tl_introduction_page_transition.to("#keyword_2", {
+
+    let tl_projects_keyword_1_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_keyword_1_color.to("#keyword_1", {
+        backgroundImage: "linear-gradient(to bottom, #999999, white)",
+    })
+
+    //* -------------------- KEYWORD #2 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_keyword_2_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_keyword_2_color.to("#keyword_2", {
         color: "transparent",
     })
-    tl_introduction_page_transition.to("#keyword_3", {
+
+    let tl_projects_keyword_2_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_keyword_2_color.to("#keyword_2", {
+        color: "#0F0F0F",
+    })
+
+    //* -------------------- KEYWORD #3 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_keyword_3_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_keyword_3_color.to("#keyword_3", {
         color: "transparent",
     })
-    tl_introduction_page_transition.to("#keyword_4", {
+
+    let tl_projects_keyword_3_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_keyword_3_color.to("#keyword_3", {
+        color: "#0F0F0F",
+    })
+
+    //* -------------------- KEYWORD #4 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_keyword_4_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_keyword_4_color.to("#keyword_4", {
         backgroundImage: "linear-gradient(to top, white, #999999)",
-        duration: 1
     })
-    tl_introduction_page_transition.to("#keyword_5", {
+
+    let tl_projects_keyword_4_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_keyword_4_color.to("#keyword_4", {
+        backgroundImage: "linear-gradient(to top, #FF2400, #991600)",
+    })
+
+    //* -------------------- KEYWORD #5 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_keyword_5_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_keyword_5_color.to("#keyword_5", {
         color: 'transparent',
-        duration: 1
     })
-    tl_introduction_page_transition.to("#keyword_6", {
+
+    let tl_projects_keyword_5_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_keyword_5_color.to("#keyword_5", {
+        color: "#0F0F0F",
+    })
+
+    //* -------------------- KEYWORD #6 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_keyword_6_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_keyword_6_color.to("#keyword_6", {
         color: "transparent",
-        duration: 1
     })
-    tl_introduction_page_transition.to("#profile_picture", {
+
+    let tl_projects_keyword_6_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_keyword_6_color.to("#keyword_6", {
+        color: "#0F0F0F",
+    })
+
+    //* -------------------- PROFILE PICTURE TRANSITION ANIMATION -------------------- *//
+    let tl_profile_picture = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            end: "-=10%",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_profile_picture.to("#profile_picture", {
         y: "100%",
         scale: 0,
         duration: 2,
         ease: "linear",
     })
-    tl_introduction_page_transition.to("#japanese_word_1", {
+
+    //* -------------------- PROJECTS PROFILE PICTURE TRANSITION ANIMATION -------------------- *//
+    let tl_projects_profile_picture = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    })
+
+    tl_projects_profile_picture.to("#projects_picture", {
+        y: "0%",
+        scale: 1,
+        duration: 2,
+        ease: "linear"
+    })
+
+    //* -------------------- JAPANESE WORD #1 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_japanese_word_1_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_japanese_word_1_color.to("#japanese_word_1", {
         color: "transparent",
     })
-    tl_introduction_page_transition.to("#japanese_word_2", {
+
+    let tl_projects_japanese_word_1_color = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    });
+
+    tl_projects_japanese_word_1_color.to("#japanese_word_1", {
+        color: "#0F0F0F",
+    })
+
+    //* -------------------- JAPANESE WORD #2 COLOR TRANSITION ANIMATION -------------------- *//
+    let tl_intro_japanese_word_2_color = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro_section",
+            start: "top center",
+            end: "bottom",
             scrub: true,
-            end: "-=10%"
         },
+    })
+
+    tl_intro_japanese_word_2_color.to("#japanese_word_2", {
         color: "transparent",
     })
-    tl_introduction_page_transition.to("#red_amaryllis_2", {
+
+    let tl_projects_japanese_word_2_color = gsap.timeline({
         scrollTrigger: {
-            trigger: "#intro_section",
+            trigger: "#projects_section",
+            start: "top",
+            end: "bottom",
             scrub: true,
         },
+    });
+
+    tl_projects_japanese_word_2_color.to("#japanese_word_2", {
+        color: "linear-gradient(to top, #FF2400, #991600)",
+    })
+
+    //* -------------------- RED AMARYLLIS #2 TRANSITION ANIMATION -------------------- *//
+    let tl_red_amaryllis_2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#header_section",
+            start: "top",
+            end: "bottom",
+            scrub: true,
+        },
+    })
+
+    tl_red_amaryllis_2.to("#red_amaryllis_2", {
         rotate: 360,
         ease: "linear"
     })
-    gsap.utils.toArray(['#keyword_1', '#keyword_2', '#keyword_3']).forEach((keyword_1, index) => {
-        tl_introduction_page_transition.add(
-            ScrollTrigger.create({
-                trigger: keyword_1,
-                start: "+=50%",
-                onEnter: () => {
-                    keyword_1.textContent = "SOFT";
-                },
-                onEnterBack: () => {
-                    keyword_1.textContent = "CREA";
-                },
-            }));
+
+    //* -------------------- KEYWORDS TRANSITION ANIMATION -------------------- *//
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+        let tl_keywords_1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#intro_section",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+            },
+        });
+
+        tl_keywords_1.to("#keywords", {
+            display: "none",
+            opacity: 0,
+        }, 0);
+
+        tl_keywords_1.fromTo("#intro_keywords", {
+            display: "none",
+            opacity: 0,
+        }, {
+            display: "flex",
+            opacity: 1,
+        });
     });
-    gsap.utils.toArray(['#keyword_4', '#keyword_5', '#keyword_6']).forEach((keyword_2, index) => {
-        tl_introduction_page_transition.add(
-            ScrollTrigger.create({
-                trigger: keyword_2,
-                start: "top center-=20%",
-                onEnter: () => {
-                    keyword_2.textContent = "SKILLS";
-                },
-                onEnterBack: () => {
-                    keyword_2.textContent = "DEV";
-                },
-            }));
+
+    mm.add("(min-width: 768px)", () => {
+        let tl_keywords_2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#projects_section",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+            },
+        });
+
+        tl_keywords_2.to("#intro_keywords", {
+            display: "none",
+            opacity: 0,
+        }, 0)
+
+        tl_keywords_2.fromTo("#projects_keywords", {
+            display: "none",
+            opacity: 0,
+        }, {
+            display: "flex",
+            opacity: 1,
+        });
     });
 
-    // //* -------------------- CARD ANIMATION -------------------- *//
-    // let tl_card = gsap.timeline({})
-    // tl_card.fromTo("#elements", {
-    //     x: 150,
-    // }, {
-    //     x: -150,
-    //     repeat: -1,
-    //     duration: 5,
-    //     ease: 'linear'
-    // })
 
-    // //* -------------------- PROJECTS PICTURE ANIMATION -------------------- *//
-    // let tl_projects_picture = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '#projects_section',
-    //         scrub: true,
-    //         end: 'bottom bottom'
-    //     }
-    // })
-    // tl_projects_picture.fromTo("#projects_picture", {
-    //     y: "10%",
-    //     scale: 0
-    // }, {
-    //     y: "0%",
-    //     scale: 1,
-    //     ease: "linear"
-    // })
-
-    // //* -------------------- PROJECTS LINKS ANIMATION -------------------- *//
-    // let tl_projects_links = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: '#projects_section',
-    //         scrub: true,
-    //         end: "bottom bottom"
-    //     }
-    // })
-    // tl_projects_links.fromTo("#first-project-link", {
-    //     y: 800,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // })
-    // tl_projects_links.fromTo("#second-project-link", {
-    //     y: 300,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // }, "<")
-    // tl_projects_links.fromTo("#third-project-link", {
-    //     y: 600,
-    //     opacity: 0
-    // }, {
-    //     y: 0,
-    //     opacity: 1,
-    // }, "<")
-    // gsap.utils.toArray(['#keyword_1', '#keyword_2', '#keyword_3']).forEach((keyword_1, index) => {
-    //     tl_introduction_page_transition.add(
-    //         ScrollTrigger.create({
-    //             trigger: keyword_1,
-    //             start: "+=50%",
-    //             onEnter: () => {
-    //                 keyword_1.textContent = "SOFT";
-    //             },
-    //             onEnterBack: () => {
-    //                 keyword_1.textContent = "CREA";
-    //             },
-    //         }));
-    // });
-    // gsap.utils.toArray(['#keyword_4', '#keyword_5', '#keyword_6']).forEach((keyword_2, index) => {
-    //     tl_introduction_page_transition.add(
-    //         ScrollTrigger.create({
-    //             trigger: keyword_2,
-    //             start: "top center-=20%",
-    //             onEnter: () => {
-    //                 keyword_2.textContent = "SKILLS";
-    //             },
-    //             onEnterBack: () => {
-    //                 keyword_2.textContent = "DEV";
-    //             },
-    //         }));
-    // });
+    return () => {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
 }

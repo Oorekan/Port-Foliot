@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import LandingPicture from "../public/brandon-monge-portfolio-cover-removebg-preview-2-removebg-preview.png"
 import CrescentMoon from "@/components/svg/CrescentMoon"
 import Amaryllis from "@/components/svg/Amaryllis"
@@ -11,11 +12,13 @@ import ReverseDoubleLine from "@/components/svg/ReverseDoubleLine"
 import Line from "@/components/svg/Line"
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function LandingPage() {
     useEffect(() => {
+        ScrollAnimation();
         //*-------------------- WHITE GRID --------------------*//
         let tl_white_grid = gsap.timeline({})
         tl_white_grid.fromTo("#white_grid", {
@@ -277,7 +280,7 @@ export default function LandingPage() {
                             Monge
                         </h1>
                     </div>
-                    <div className="lg:absolute hidden lg:flex flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
+                    <div id="keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
                         <h2 id="keyword_1" className="z-20 bg-gradient-to-b from-[#999999] to-white inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             CREA
                         </h2>
@@ -288,7 +291,29 @@ export default function LandingPage() {
                             CREA
                         </h2>
                     </div>
-                    <div className="lg:absolute hidden lg:flex flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
+                    <div id="intro_keywords" className="lg:absolute hidden lg:flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
+                        <h2 id="keyword_1" className="z-20 bg-gradient-to-b from-[#999999] to-white inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            SOFT
+                        </h2>
+                        <h2 id="keyword_2" className="z-10 bg-gradient-to-b from-[#999999] to-white inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            SOFT
+                        </h2>
+                        <h2 id="keyword_3" className="bg-gradient-to-b from-[#999999] to-white inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            SOFT
+                        </h2>
+                    </div>
+                    <div id="projects_keywords" className="lg:absolute hidden lg:flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
+                        <h2 id="keyword_1" className="z-20 bg-gradient-to-b from-[#999999] to-white inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            ALL
+                        </h2>
+                        <h2 id="keyword_2" className="z-10 bg-gradient-to-b from-[#999999] to-white inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            ALL
+                        </h2>
+                        <h2 id="keyword_3" className="bg-gradient-to-b from-[#999999] to-white inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            ALL
+                        </h2>
+                    </div>
+                    <div id="keywords" className="lg:absolute hidden lg:flex flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
                         <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             DEV
                         </h2>
@@ -297,6 +322,28 @@ export default function LandingPage() {
                         </h2>
                         <h2 id="keyword_6" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded" style={{ WebkitTextStroke: '1px transparent' }}>
                             DEV
+                        </h2>
+                    </div>
+                    <div id="intro_keywords" className="lg:absolute hidden lg:flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
+                        <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            SKILLS
+                        </h2>
+                        <h2 id="keyword_5" className="z-10 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            SKILLS
+                        </h2>
+                        <h2 id="keyword_6" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded" style={{ WebkitTextStroke: '1px transparent' }}>
+                            SKILLS
+                        </h2>
+                    </div>
+                    <div id="projects_keywords" className="lg:absolute hidden lg:flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
+                        <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            PROJECTS
+                        </h2>
+                        <h2 id="keyword_5" className="z-10 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                            PROJECTS
+                        </h2>
+                        <h2 id="keyword_6" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded" style={{ WebkitTextStroke: '1px transparent' }}>
+                            PROJECTS
                         </h2>
                     </div>
                     <div className="absolute flex flex-col bottom-0 right-0 mb-[10%] lg:mr-[9.3%] mr-[25%]">
@@ -350,9 +397,11 @@ export default function LandingPage() {
                         <Line id={"white_line_1"} color={"white"} primaryColor={"black"} />
                     </div>
                     <div className="absolute top-0 right-0 lg:mt-[4.4%] lg:mr-[11.3%] mt-[16%] mr-[2.5%]">
-                        <h3 id="contact" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[22px] font-akiraExpanded">
-                            Contact
-                        </h3>
+                        <Link href="#contact_section" scroll={false}>
+                            <h3 id="contact" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[22px] font-akiraExpanded">
+                                Contact
+                            </h3>
+                        </Link>
                     </div>
                 </div>
             </div >
