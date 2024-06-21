@@ -45,6 +45,10 @@ export default function IntroductionPage() {
                 }
             })
             tl_default.to("#cards", {
+                scrollTrigger: {
+                    trigger: "#intro_section",
+                    scrub: 1,
+                },
                 x: "-150%",
             })
         });
@@ -66,7 +70,6 @@ export default function IntroductionPage() {
                 x: "-500%",
             })
         });
-
 
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
