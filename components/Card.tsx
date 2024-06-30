@@ -2,7 +2,6 @@
 
 import React, { useEffect } from "react"
 import Image from "next/image"
-import React_Logo_SVG from "../public/react-logo.svg"
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
@@ -10,10 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 type CardProps = {
     title: string;
+    image: string;
     elements: any[];
 }
 
-const Card: React.FC<CardProps> = ({ title, elements }) => {
+const Card: React.FC<CardProps> = ({ title, image, elements }) => {
     useEffect(() => {
         //* -------------------- CARD -------------------- *//
         let tl_card = gsap.timeline({})
@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({ title, elements }) => {
         <>
             <div id="card" className="relative w-[352px] h-[512px] bg-[radial-gradient(circle,#FFFFFF,#999999)] rounded-[20px] p-[15px]">
                 <div className="relative flex flex-col justify-around items-center w-full h-full bg-onyx-black bg-[url('../public/noisy-background.png')] rounded-[5px] overflow-hidden">
-                    <Image src={React_Logo_SVG} alt="react-logo" />
+                    <Image src={image} alt="react-logo" />
                     <h2 className="text-[42px] font-akiraExpanded">{title}</h2>
                     <div className="flex gap-5">
                         <div className="flex gap-5">

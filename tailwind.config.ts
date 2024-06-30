@@ -19,7 +19,8 @@ const config: Config = {
       },
       fontFamily: {
         japaneseRobot: ['var(--font-japaneseRobot)'],
-        akiraExpanded: ['var(--font-akiraExpanded)']
+        akiraExpanded: ['var(--font-akiraExpanded)'],
+        danzza: ['var(--font-danzza)'],
       },
     },
   },

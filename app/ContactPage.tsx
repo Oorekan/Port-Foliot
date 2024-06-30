@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,9 +48,11 @@ export default function Contact() {
                                     Instagram
                                 </a>
                             </div>
-                            <a id="contact_terms_of_use" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white" href='/'>
-                                Mentions legales
-                            </a>
+                            <Link href="/mentions-legales">
+                                <h4 id="contact_terms_of_use" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white">
+                                    Mentions legales
+                                </h4>
+                            </Link>
                         </div>
                     </div>
                 </div>

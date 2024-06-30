@@ -1,29 +1,40 @@
 'use client'
+
 import { useEffect } from "react";
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 import Card from "@/components/Card";
+import React_Icon from "@/public/react-icon.svg";
+import Webflow_Icon from "@/public/webflow-icon.svg";
+import Figma_Icon from "@/public/figma-icon.svg";
+import Abilities_Icon from "@/public/abilities-icon.svg";
+import Hobbies_Icon from "@/public/hobbies-icon.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 let Card_Info = [{
     title: "React",
+    image: React_Icon,
     elements: ["Next", "Node", "GSAP"]
 },
 {
     title: "Webflow",
+    image: Webflow_Icon,
     elements: ["Structure", "CMS", "Analytics"]
 },
 {
     title: "Figma",
+    image: Figma_Icon,
     elements: ["Mockups", "Design", "Plugins"]
 },
 {
-    title: "Soft",
+    title: "Abilities",
+    image: Abilities_Icon,
     elements: ["Communication", "Creativity", "Adaptability"]
 },
 {
     title: "Hobbies",
+    image: Hobbies_Icon,
     elements: ["Sport", "Games", "Travel"]
 }]
 
@@ -49,7 +60,7 @@ export default function IntroductionPage() {
                     trigger: "#intro_section",
                     scrub: 1,
                 },
-                x: "-150%",
+                x: "-200%",
             })
         });
 
@@ -79,8 +90,8 @@ export default function IntroductionPage() {
         <section id="intro_section" className="relative w-screen h-screen max-w-full overflow-hidden">
             <div id="intro_container" className="relative w-full h-full">
                 <div id="intro_wrapper" className="relative w-full h-full">
-                    <div id="cards" className="relative h-full flex gap-14 items-center lg:left-[100%] left-[50%]">
-                        {Card_Info.map((el, index) => <Card key={index} title={el.title} elements={el.elements} />)}
+                    <div id="cards" className="relative h-full flex gap-14 items-center lg:left-[150%] left-[50%]">
+                        {Card_Info.map((el, index) => <Card key={index} title={el.title} image={el.image} elements={el.elements} />)}
                     </div>
                 </div>
             </div>
