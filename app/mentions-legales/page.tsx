@@ -16,7 +16,7 @@ import ReverseDoubleLine from "@/components/svg/ReverseDoubleLine"
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function page() {
+export default function Page() {
     useEffect(() => {
         //*-------------------- WHITE GRID --------------------*//
         let tl_white_grid = gsap.timeline({})
