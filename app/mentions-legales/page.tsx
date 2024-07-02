@@ -235,19 +235,15 @@ export default function Page() {
             <section className="relative w-screen max-w-full h-full min-h-screen overflow-hidden lg:h-screen">
                 <div id="background" className="w-screen max-w-full h-full min-h-screen bg-onyx-black bg-[url('../public/noisy-background.png')]">
                     <div id="white_grid" className="w-screen max-w-full h-full min-h-screen bg-[linear-gradient(to_right,rgb(255,255,255,0.2),transparent_1px),linear-gradient(to_bottom,rgb(255,255,255,0.2),transparent_1px)] bg-[size:20%_10%] lg:grid lg:grid-rows-10 lg:grid-cols-[repeat(20,minmax(0,1fr))] lg:gap-4 lg:bg-[size:5%_10%]">
-                        <div className="relative flex justify-between items-center py-10 mx-5 lg:block lg:py-0 lg:*:mx-0 lg:row-start-1 lg:col-start-[16] lg:col-span-2 lg:place-self-end">
-                            <div className="lg:hidden">
-                                <Link href="/">
-                                    <CrescentMoon id={"crescent_moon"} gradientColor1={"#FF2400"} gradientColor2={"#991600"} stopColor={"red"} />
-                                </Link>
-                            </div>
-                            <div>
-                                <Link href="#contact_section" scroll={false}>
-                                    <h3 id="contact" className="inline-block text-2xl text-transparent bg-clip-text font-akiraExpanded bg-gradient-to-b from-[#991600] to-scarlet-red">
-                                        Contact
-                                    </h3>
-                                </Link>
-                            </div>
+                        <div className="relative flex justify-between items-center py-10 mx-5 lg:hidden lg:py-0 lg:mx-0 lg:row-start-1 lg:col-start-[16] lg:col-span-2 lg:place-self-end">
+                            <Link href="/">
+                                <CrescentMoon id={"crescent_moon"} gradientColor1={"#FF2400"} gradientColor2={"#991600"} stopColor={"red"} />
+                            </Link>
+                            <Link href="#contact_section" scroll={false}>
+                                <h3 id="contact" className="inline-block text-2xl text-transparent bg-clip-text font-akiraExpanded bg-gradient-to-b from-[#991600] to-scarlet-red">
+                                    Contact
+                                </h3>
+                            </Link>
                         </div>
                         <div className="relative flex flex-col text-center py-5 lg:row-start-2 lg:row-span-2 lg:col-start-2 lg:col-span-12 lg:place-self-start">
                             <h1 id="first_name" className="relative inline-block text-6xl text-transparent bg-clip-text font-japaneseRobot bg-gradient-to-b from-[#991600] to-scarlet-red lg:text-[102px]" style={{ WebkitTextStroke: '1px transparent' }}>
@@ -259,7 +255,7 @@ export default function Page() {
                         </div>
                         <div className="relative inline-block px-10 py-14 lg:row-start-3 lg:row-span-3 lg:col-start-[15] lg:col-span-4 lg:place-self-center">
                             <p id="paragraph_4" className="relative text-xl text-transparent bg-clip-text font-danzza bg-gradient-to-b from-[#991600] to-scarlet-red">
-                                Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
+                                Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l&apos;économie numérique, il est précisé aux utilisateurs du site l&apos;identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
                             </p>
                             <div className="relative flex justify-end mt-2">
                                 <ReverseDoubleLine id={"double_red_line_1"} color={"red"} primaryColor={"red"} />
@@ -350,7 +346,7 @@ export default function Page() {
                                     </div>
                                     <h4 className="inline-block text-[22px] text-transparent bg-clip-text font-akiraExpanded bg-gradient-to-b from-[#999999] to-white lg:hover:text-white">
                                         <Link href="/">
-                                            Page d'accueil
+                                            Page d&apos;accueil
                                         </Link>
                                     </h4>
                                 </div>
