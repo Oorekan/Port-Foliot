@@ -3,16 +3,20 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LandingPicture from "../public/brandon-monge-portfolio-cover-removebg-preview-2-removebg-preview.png"
+
+import LandingPicture from "@/public/portfolio-header-image-4 copie.png"
 import CrescentMoon from "@/components/svg/CrescentMoon"
 import Amaryllis from "@/components/svg/Amaryllis"
 import Sparkles from "@/components/svg/Sparkles"
 import DoubleLine from "@/components/svg/DoubleLine"
 import ReverseDoubleLine from "@/components/svg/ReverseDoubleLine"
 import Line from "@/components/svg/Line"
+
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 import ScrollAnimation from "@/components/ScrollAnimation";
+
+// import Fake3DEffect from "@/components/Fake3DEffect"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,7 +30,7 @@ export default function LandingPage() {
         }, {
             opacity: 1,
             duration: 2,
-            ease: 'linear'
+            ease: "expo.in"
         })
         //* -------------------- KEYWORDS 1 -------------------- *//
         let tl_keywords_1 = gsap.timeline({})
@@ -36,6 +40,8 @@ export default function LandingPage() {
         }, {
             y: 0,
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         tl_keywords_1.fromTo("#keyword_2", {
             y: -50,
@@ -43,6 +49,7 @@ export default function LandingPage() {
         }, {
             y: 0,
             opacity: 1,
+            duration: 0.7,
         }, ">-0.3")
         tl_keywords_1.fromTo("#keyword_3", {
             y: -50,
@@ -50,6 +57,7 @@ export default function LandingPage() {
         }, {
             y: 0,
             opacity: 1,
+            duration: 0.7
         }, ">-0.3")
         //* -------------------- KEYWORDS 2 -------------------- *//
         let tl_keywords_2 = gsap.timeline({})
@@ -60,6 +68,7 @@ export default function LandingPage() {
             y: 0,
             opacity: 1,
             duration: 0.7,
+            delay: 2
         })
         tl_keywords_2.fromTo("#keyword_5", {
             y: -50,
@@ -67,6 +76,7 @@ export default function LandingPage() {
         }, {
             y: 0,
             opacity: 1,
+            duration: 0.7,
         }, ">-0.3")
         tl_keywords_2.fromTo("#keyword_6", {
             y: -50,
@@ -74,6 +84,7 @@ export default function LandingPage() {
         }, {
             y: 0,
             opacity: 1,
+            duration: 0.7,
         }, ">-0.3")
         //* -------------------- JAPANESE WORDS -------------------- *//
         let tl_japanese_word = gsap.timeline({})
@@ -84,6 +95,7 @@ export default function LandingPage() {
             y: 0,
             opacity: 1,
             duration: 0.7,
+            delay: 2
         })
         tl_japanese_word.fromTo("#japanese_word_2", {
             y: -50,
@@ -91,6 +103,7 @@ export default function LandingPage() {
         }, {
             y: 0,
             opacity: 1,
+            duration: 0.7,
         }, ">-0.3")
         //* -------------------- RED LINES -------------------- *//
         let tl_red_lines = gsap.timeline({})
@@ -101,16 +114,19 @@ export default function LandingPage() {
         }, {
             x: 0,
             opacity: 1,
-            scale: 1
+            scale: 1,
+            duration: 0.7,
+            delay: 2
         })
         tl_red_lines.fromTo("#double_red_line_2", {
             x: -50,
             opacity: 0,
-            scale: 0
+            scale: 0,
         }, {
             x: 0,
             opacity: 1,
-            scale: 1
+            scale: 1,
+            duration: 0.7,
         }, ">-0.3")
         tl_red_lines.fromTo("#double_red_line_3", {
             x: -50,
@@ -119,7 +135,8 @@ export default function LandingPage() {
         }, {
             x: 0,
             opacity: 1,
-            scale: 1
+            scale: 1,
+            duration: 0.7,
         }, ">-0.3")
         tl_red_lines.fromTo("#red_line_1", {
             x: -50,
@@ -128,7 +145,8 @@ export default function LandingPage() {
         }, {
             x: 0,
             opacity: 1,
-            scale: 1
+            scale: 1,
+            duration: 0.7,
         }, ">-0.3")
         //* -------------------- WHITE LINES -------------------- *//
         let tl_white_lines = gsap.timeline({})
@@ -139,7 +157,9 @@ export default function LandingPage() {
         }, {
             x: 0,
             opacity: 1,
-            scale: 1
+            scale: 1,
+            duration: 0.7,
+            delay: 2
         })
         tl_white_lines.fromTo("#double_white_line_2", {
             x: 50,
@@ -148,7 +168,8 @@ export default function LandingPage() {
         }, {
             x: 0,
             opacity: 1,
-            scale: 1
+            scale: 1,
+            duration: 0.7,
         }, ">-0.3")
         tl_white_lines.fromTo("#white_line_1", {
             x: 50,
@@ -157,7 +178,8 @@ export default function LandingPage() {
         }, {
             x: 0,
             opacity: 1,
-            scale: 1
+            scale: 1,
+            duration: 0.7,
         }, ">-0.3")
         //* -------------------- PROFILE PICTURE -------------------- *//
         let tl_profile_picture = gsap.timeline({})
@@ -167,6 +189,8 @@ export default function LandingPage() {
         }, {
             y: '0%',
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         //* -------------------- RED AMARYLLIS -------------------- *//
         let tl_red_amaryllis = gsap.timeline({})
@@ -176,6 +200,8 @@ export default function LandingPage() {
         }, {
             rotate: 0,
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         tl_red_amaryllis.fromTo("#red_amaryllis_2", {
             rotate: 50,
@@ -183,6 +209,7 @@ export default function LandingPage() {
         }, {
             rotate: 0,
             opacity: 1,
+            duration: 0.7,
         }, ">-0.3")
         //* -------------------- WHITE AMARYLLIS -------------------- *//
         let tl_white_amaryllis = gsap.timeline({})
@@ -192,7 +219,8 @@ export default function LandingPage() {
         }, {
             rotate: 0,
             opacity: 1,
-            delay: 0.6
+            duration: 0.7,
+            delay: 2.6
         })
         //* -------------------- CRESCENT MOON -------------------- *//
         let tl_crescent_moon = gsap.timeline({})
@@ -202,6 +230,8 @@ export default function LandingPage() {
         }, {
             y: '0%',
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         //* -------------------- WHITE SPARKLES -------------------- *//
         let tl_white_sparkles = gsap.timeline({})
@@ -211,6 +241,8 @@ export default function LandingPage() {
         }, {
             rotate: 0,
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         tl_white_sparkles.fromTo("#white_sparkle_2", {
             rotate: -50,
@@ -218,6 +250,7 @@ export default function LandingPage() {
         }, {
             rotate: 0,
             opacity: 1,
+            duration: 0.7,
         }, ">-0.3")
         //* -------------------- RED SPARKLES -------------------- *//
         let tl_red_sparkles = gsap.timeline({})
@@ -227,6 +260,8 @@ export default function LandingPage() {
         }, {
             rotate: 0,
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         //* -------------------- CONTACT -------------------- *//
         let tl_contact = gsap.timeline({})
@@ -236,6 +271,8 @@ export default function LandingPage() {
         }, {
             x: 0,
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         //* -------------------- NAMES -------------------- *//
         let tl_names = gsap.timeline({})
@@ -245,6 +282,8 @@ export default function LandingPage() {
         }, {
             y: '0%',
             opacity: 1,
+            duration: 0.7,
+            delay: 2
         })
         tl_names.fromTo("#last_name", {
             y: '10%',
@@ -252,6 +291,7 @@ export default function LandingPage() {
         }, {
             y: '0%',
             opacity: 1,
+            duration: 0.7,
         }, ">-0.3")
         //* -------------------- KILL -------------------- *//
         return () => {
@@ -267,10 +307,11 @@ export default function LandingPage() {
                             id="profile_picture"
                             className="mx-auto"
                             src={LandingPicture}
-                            width={1280}
+                            width={0}
                             height={0}
                             alt="brandon-monge-picture">
                         </Image>
+                        {/* <Fake3DEffect imageSrc={LandingPicture} /> */}
                     </div>
                     <div className="inline-block top-0 lg:left-0 lg:mt-[5.5%] lg:ml-[6.5%] mt-[45%] ml-[1%]">
                         <h1 id="first_name" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text lg:text-[102px] text-[72px] font-japaneseRobot" style={{ WebkitTextStroke: '1px transparent' }}>

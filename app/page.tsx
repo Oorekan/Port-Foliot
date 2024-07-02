@@ -1,15 +1,10 @@
-import IntroductionPage from "./IntroductionPage";
-import LandingPage from "./LandingPage";
-import ProjectPage from "./ProjectsPage";
-import Contact from "./ContactPage";
+
+import SectionsPage from "./SectionsPage";
 
 export default function Home() {
   return (
     <>
-      <LandingPage />
-      <IntroductionPage />
-      <ProjectPage />
-      <Contact />
+      <SectionsPage />
     </>
   )
 }

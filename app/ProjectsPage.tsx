@@ -2,13 +2,17 @@
 
 import { useEffect } from "react"
 import Image from "next/image"
-import Project_Picture from "../public/brandon-monge-portfolio-cover-removebg-preview copie.png"
+
+import Project_Picture from "@/public/portfolio-header-image-2 copie.png"
 import FirstProject from "../public/securité-regie et copro.png"
 import SecondProject from "../public/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
 import ThirdProject from "../public/rse-hero-header-bg.png"
+
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 import ScrollAnimation from "@/components/ScrollAnimation"
+
+import Contact from "./ContactPage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,14 +40,14 @@ export default function ProjectPage() {
         }, {
             y: 0,
             opacity: 1,
-        }, "<")
+        }, 0)
         tl_projects_links.fromTo("#third-project-link", {
             y: 600,
             opacity: 0
         }, {
             y: 0,
             opacity: 1,
-        }, "<")
+        }, 0)
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
@@ -54,12 +58,12 @@ export default function ProjectPage() {
                 <div id="projects_container" className="relative w-full h-full">
                     <div id="projects_wrapper" className="relative w-full h-full">
                         <div className="absolute inset-0 h-full w-full">
-                            <div className="absolute w-full bottom-0 z-10">
+                            <div className="absolute w-full bottom-0">
                                 <Image
                                     id="projects_picture"
-                                    className="lg:mx-[27%] mx-[15%] scale-0 transform translate-y-[10%]"
+                                    className="mx-auto"
                                     src={Project_Picture}
-                                    width={1280}
+                                    width={0}
                                     height={0}
                                     alt="projects-picture">
                                 </Image>
@@ -94,8 +98,8 @@ export default function ProjectPage() {
                                     </div>
                                 </a>
                             </div>
-
                         </div>
+                        <Contact />
                     </div>
                 </div>
             </section >

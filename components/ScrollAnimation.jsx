@@ -534,7 +534,6 @@ export default function ScrollAnimation() {
         });
     });
 
-
     return () => {
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
