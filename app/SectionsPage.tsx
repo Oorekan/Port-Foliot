@@ -5,12 +5,11 @@ import { useEffect } from "react";
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
 import LandingPage from "./LandingPage";
 import IntroductionPage from "./IntroductionPage";
 import ProjectPage from "./ProjectsPage";
 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SectionsPage() {
     useEffect(() => {
