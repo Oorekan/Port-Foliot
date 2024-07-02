@@ -7,8 +7,9 @@ import Card from "@/components/Card";
 import React_Icon from "@/public/react-icon.svg";
 import Webflow_Icon from "@/public/webflow-icon.svg";
 import Figma_Icon from "@/public/figma-icon.svg";
-import Abilities_Icon from "@/public/abilities-icon.svg";
+// import Abilities_Icon from "@/public/abilities-icon.svg";
 import Hobbies_Icon from "@/public/hobbies-icon.svg";
+import LightBulb from "@/public/light-bulb 1.svg"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +30,7 @@ let Card_Info = [{
 },
 {
     title: "Abilities",
-    image: Abilities_Icon,
+    image: LightBulb,
     elements: ["Communication", "Creativity", "Adaptability"]
 },
 {
