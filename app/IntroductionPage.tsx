@@ -61,7 +61,7 @@ export default function IntroductionPage() {
                     trigger: "#intro_section",
                     scrub: 1,
                 },
-                x: "-200%",
+                x: "-200vw",
             })
         });
 
@@ -88,10 +88,10 @@ export default function IntroductionPage() {
         };
     }, [])
     return (
-        <section id="intro_section" className="relative w-screen h-screen max-w-full overflow-hidden">
+        <section id="intro_section" className="relative lg:w-[400vw] w-screen h-screen overflow-hidden">
             <div id="intro_container" className="relative w-full h-full">
                 <div id="intro_wrapper" className="relative w-full h-full">
-                    <div id="cards" className="relative h-full flex gap-14 items-center lg:left-[150%] left-[50%]">
+                    <div id="cards" className="relative lg:w-full h-full flex gap-14 lg:justify-center items-center left-[50%] lg:right-0 lg:left-0">
                         {Card_Info.map((el, index) => <Card key={index} title={el.title} image={el.image} elements={el.elements} />)}
                     </div>
                 </div>

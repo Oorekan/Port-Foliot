@@ -12,7 +12,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     });
@@ -39,7 +39,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -70,7 +70,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -101,13 +101,20 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
 
     tl_intro_red_primary_color.to("#primaryColor_red", {
-        fill: "white",
+        opacity: 0,
+        scaleX: 0,
+        transformOrigin: "right center"
+    }).to("#primaryColor_red", {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.7,
+        backgroundColor: "white"
     })
 
     let tl_projects_red_primary_color = gsap.timeline({
@@ -120,9 +127,15 @@ export default function ScrollAnimation() {
     });
 
     tl_projects_red_primary_color.to("#primaryColor_red", {
-        fill: "#FF2400",
+        opacity: 0,
+        scaleX: 0,
+        transformOrigin: "right center"
+    }).to("#primaryColor_red", {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.7,
+        backgroundColor: "#FF2400",
     })
-
     //* -------------------- WHITE COLOR PAGE TRANSITION ANIMATION -------------------- *//
     // let tl_white_color_page_transition = gsap.timeline({
     //     scrollTrigger: {
@@ -143,13 +156,20 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
 
     tl_intro_black_primary_color.to("#primaryColor_black", {
-        fill: "#0F0F0F",
+        opacity: 0,
+        scaleX: 0,
+        transformOrigin: "right center"
+    }).to("#primaryColor_black", {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.7,
+        backgroundColor: "#0F0F0F",
     })
 
     let tl_projects_black_primary_color = gsap.timeline({
@@ -162,7 +182,14 @@ export default function ScrollAnimation() {
     });
 
     tl_projects_black_primary_color.to("#primaryColor_black", {
-        fill: "white",
+        opacity: 0,
+        scaleX: 0,
+        transformOrigin: "right center"
+    }).to("#primaryColor_black", {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.7,
+        backgroundColor: "white",
     })
 
     //* -------------------- CONTACT COLOR TRANSITION ANIMATION -------------------- *//
@@ -170,7 +197,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -197,7 +224,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -224,7 +251,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -251,7 +278,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -278,7 +305,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -305,7 +332,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -332,7 +359,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -359,7 +386,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -419,7 +446,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -446,7 +473,7 @@ export default function ScrollAnimation() {
         scrollTrigger: {
             trigger: "#intro_section",
             start: "top center",
-            end: "bottom",
+            end: "center",
             scrub: true,
         },
     })
@@ -471,7 +498,7 @@ export default function ScrollAnimation() {
     //* -------------------- RED AMARYLLIS #2 TRANSITION ANIMATION -------------------- *//
     let tl_red_amaryllis_2 = gsap.timeline({
         scrollTrigger: {
-            trigger: "#header_section",
+            trigger: "#page_layout",
             start: "top",
             end: "bottom",
             scrub: true,
@@ -484,34 +511,146 @@ export default function ScrollAnimation() {
     })
 
     //* -------------------- KEYWORDS TRANSITION ANIMATION -------------------- *//
+    // let key = (trigger, next) => {
+    //     let tl_keywords = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: `${trigger}`,
+    //             start: "top center",
+    //             toggleActions: "play none none reverse",
+    //         }
+    //     });
+    //     tl_keywords.fromTo(`${next}`, {
+    //         display: "none",
+    //         opacity: 0
+    //     }, {
+    //         display: "flex",
+    //         opacity: 1,
+    //         duration: 0.7,
+    //     }, 0);
+    //     tl_keywords.fromTo(`${next} #keyword_1`, {
+    //         y: -50,
+    //         opacity: 0
+    //     }, {
+    //         y: 0,
+    //         opacity: 1,
+    //         duration: 0.7,
+    //     }, 0);
+    //     tl_keywords.fromTo(`${next} #keyword_2`, {
+    //         y: -50,
+    //         opacity: 0
+    //     }, {
+    //         y: 0,
+    //         opacity: 1,
+    //         duration: 0.7,
+    //     }, ">-0.3");
+    //     tl_keywords.fromTo(`${next} #keyword_3`, {
+    //         y: -50,
+    //         opacity: 0
+    //     }, {
+    //         y: 0,
+    //         opacity: 1,
+    //         duration: 0.7
+    //     }, ">-0.3");
+
+    //     return () => {
+    //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    //     };
+    // };
+
+    // key("#intro_section", "#intro_keywords");
+    // key("#projects_section", "#projects_keywords");
+
+    // ScrollTrigger.refresh();
+
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
-        let tl_keywords_1 = gsap.timeline({
+        let tl_keywords_2 = gsap.timeline({
             scrollTrigger: {
                 trigger: "#intro_section",
-                start: "top top",
-                end: "bottom top",
-                scrub: true,
+                start: "top center",
+                scrub: true
             },
         });
 
-        tl_keywords_1.to("#keywords", {
+        tl_keywords_2.to("#keywords", {
             display: "none",
             opacity: 0,
-        }, 0);
+        });
 
-        tl_keywords_1.fromTo("#intro_keywords", {
+        tl_keywords_2.fromTo("#intro_keywords", {
             display: "none",
-            opacity: 0,
+            opacity: 0
         }, {
             display: "flex",
             opacity: 1,
+            duration: 0.7
         });
-    });
+
+        tl_keywords_2.fromTo("#intro_keywords #keyword_1", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0);
+        tl_keywords_2.fromTo("#intro_keywords #keyword_4", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0);
+        tl_keywords_2.fromTo("#intro_keywords #keyword_2", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, ">-0.3");
+        tl_keywords_2.fromTo("#intro_keywords #keyword_5", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0.3);
+        tl_keywords_2.fromTo("#intro_keywords #keyword_3", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, ">-0.3");
+        tl_keywords_2.fromTo("#intro_keywords #keyword_6", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0.6);
+    })
 
     mm.add("(min-width: 768px)", () => {
-        let tl_keywords_2 = gsap.timeline({
+        let tl_keywords_4 = gsap.timeline({
             scrollTrigger: {
                 trigger: "#projects_section",
                 start: "top top",
@@ -520,18 +659,79 @@ export default function ScrollAnimation() {
             },
         });
 
-        tl_keywords_2.to("#intro_keywords", {
+        tl_keywords_4.to("#intro_keywords", {
             display: "none",
             opacity: 0,
         }, 0)
 
-        tl_keywords_2.fromTo("#projects_keywords", {
+        tl_keywords_4.fromTo("#projects_keywords", {
             display: "none",
             opacity: 0,
         }, {
             display: "flex",
             opacity: 1,
         });
+
+        tl_keywords_4.fromTo("#projects_keywords #keyword_1", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0);
+        tl_keywords_4.fromTo("#projects_keywords #keyword_4", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0);
+        tl_keywords_4.fromTo("#projects_keywords #keyword_2", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, ">-0.3");
+        tl_keywords_4.fromTo("#projects_keywords #keyword_5", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0.3);
+        tl_keywords_4.fromTo("#projects_keywords #keyword_3", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, ">-0.3");
+        tl_keywords_4.fromTo("#projects_keywords #keyword_6", {
+            display: "none",
+            y: -50,
+            opacity: 0
+        }, {
+            display: "inline-block",
+            y: 0,
+            opacity: 1,
+            duration: 0.7
+        }, 0.6);
     });
 
     return () => {

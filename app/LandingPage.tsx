@@ -24,7 +24,8 @@ export default function LandingPage() {
     useEffect(() => {
         ScrollAnimation();
         //*-------------------- WHITE GRID --------------------*//
-        let tl_white_grid = gsap.timeline({})
+        let tl_white_grid = gsap.timeline({
+        })
         tl_white_grid.fromTo("#white_grid", {
             opacity: 0,
         }, {
@@ -108,78 +109,71 @@ export default function LandingPage() {
         //* -------------------- RED LINES -------------------- *//
         let tl_red_lines = gsap.timeline({})
         tl_red_lines.fromTo("#double_red_line_1", {
-            x: -50,
             opacity: 0,
-            scale: 0
+            scaleX: 0,
+            transformOrigin: "right center"
         }, {
-            x: 0,
             opacity: 1,
-            scale: 1,
+            scaleX: 1,
             duration: 0.7,
             delay: 2
         })
         tl_red_lines.fromTo("#double_red_line_2", {
-            x: -50,
             opacity: 0,
-            scale: 0,
+            scaleX: 0,
+            transformOrigin: "right center"
         }, {
-            x: 0,
             opacity: 1,
-            scale: 1,
-            duration: 0.7,
+            scaleX: 1,
+            duration: 0.7
         }, ">-0.3")
         tl_red_lines.fromTo("#double_red_line_3", {
-            x: -50,
             opacity: 0,
-            scale: 0
+            scaleX: 0,
+            transformOrigin: "left center"
         }, {
-            x: 0,
             opacity: 1,
-            scale: 1,
-            duration: 0.7,
+            scaleX: 1,
+            duration: 0.7
         }, ">-0.3")
         tl_red_lines.fromTo("#red_line_1", {
-            x: -50,
             opacity: 0,
-            scale: 0
+            scaleX: 0,
+            transformOrigin: "left center"
         }, {
-            x: 0,
             opacity: 1,
-            scale: 1,
-            duration: 0.7,
+            scaleX: 1,
+            duration: 0.7
         }, ">-0.3")
         //* -------------------- WHITE LINES -------------------- *//
         let tl_white_lines = gsap.timeline({})
         tl_white_lines.fromTo("#double_white_line_1", {
-            x: 50,
             opacity: 0,
-            scale: 0
+            scaleX: 0,
+            transformOrigin: "left center"
         }, {
-            x: 0,
             opacity: 1,
-            scale: 1,
+            scaleX: 1,
             duration: 0.7,
             delay: 2
         })
         tl_white_lines.fromTo("#double_white_line_2", {
-            x: 50,
             opacity: 0,
-            scale: 0
+            scaleX: 0,
+            transformOrigin: "left center"
         }, {
-            x: 0,
             opacity: 1,
-            scale: 1,
-            duration: 0.7,
+            scaleX: 1,
+            duration: 0.7
         }, ">-0.3")
         tl_white_lines.fromTo("#white_line_1", {
-            x: 50,
             opacity: 0,
-            scale: 0
+            scaleX: 0,
+            transformOrigin: "left center"
         }, {
-            x: 0,
             opacity: 1,
-            scale: 1,
-            duration: 0.7,
+            scaleX: 1,
+            duration: 0.7
         }, ">-0.3")
         //* -------------------- PROFILE PICTURE -------------------- *//
         let tl_profile_picture = gsap.timeline({})
@@ -293,6 +287,9 @@ export default function LandingPage() {
             opacity: 1,
             duration: 0.7,
         }, ">-0.3")
+        tl_names.eventCallback("onComplete", () => {
+            document.getElementById("page_layout")?.classList.remove("blockScroll");
+        });
         //* -------------------- KILL -------------------- *//
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -332,18 +329,18 @@ export default function LandingPage() {
                             CREA
                         </h2>
                     </div>
-                    <div id="intro_keywords" className="lg:absolute hidden lg:flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
-                        <h2 id="keyword_1" className="z-20 bg-gradient-to-b from-[#999999] to-white inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                    <div id="intro_keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
+                        <h2 id="keyword_1" className="hidden z-20 bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             SOFT
                         </h2>
-                        <h2 id="keyword_2" className="z-10 bg-gradient-to-b from-[#999999] to-white inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                        <h2 id="keyword_2" className="hidden z-10 bg-gradient-to-b from-[#999999] to-white text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             SOFT
                         </h2>
-                        <h2 id="keyword_3" className="bg-gradient-to-b from-[#999999] to-white inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                        <h2 id="keyword_3" className="hidden bg-gradient-to-b from-[#999999] to-white text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             SOFT
                         </h2>
                     </div>
-                    <div id="projects_keywords" className="lg:absolute hidden lg:flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
+                    <div id="projects_keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 right-0 mt-[10%] mr-[16.7%]">
                         <h2 id="keyword_1" className="z-20 bg-gradient-to-b from-[#999999] to-white inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             ALL
                         </h2>
@@ -354,7 +351,7 @@ export default function LandingPage() {
                             ALL
                         </h2>
                     </div>
-                    <div id="keywords" className="lg:absolute hidden lg:flex flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
+                    <div id="keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 left-0 mt-[38%] ml-[16.7%]">
                         <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             DEV
                         </h2>
@@ -365,18 +362,18 @@ export default function LandingPage() {
                             DEV
                         </h2>
                     </div>
-                    <div id="intro_keywords" className="lg:absolute hidden lg:flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
-                        <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                    <div id="intro_keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 left-0 mt-[38%] ml-[16.7%]">
+                        <h2 id="keyword_4" className="hidden z-20 bg-gradient-to-b from-[#991600] to-scarlet-red text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             SKILLS
                         </h2>
-                        <h2 id="keyword_5" className="z-10 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
+                        <h2 id="keyword_5" className="hidden z-10 bg-gradient-to-b from-[#991600] to-scarlet-red text-onyx-black bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             SKILLS
                         </h2>
-                        <h2 id="keyword_6" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-onyx-black bg-clip-text text-[82px] font-akiraExpanded" style={{ WebkitTextStroke: '1px transparent' }}>
+                        <h2 id="keyword_6" className="hidden bg-gradient-to-b from-[#991600] to-scarlet-red text-onyx-black bg-clip-text text-[82px] font-akiraExpanded" style={{ WebkitTextStroke: '1px transparent' }}>
                             SKILLS
                         </h2>
                     </div>
-                    <div id="projects_keywords" className="lg:absolute hidden lg:flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
+                    <div id="projects_keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 left-0 mt-[38%] ml-[16.7%]">
                         <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             PROJECTS
                         </h2>
@@ -437,8 +434,8 @@ export default function LandingPage() {
                     <div className="absolute bottom-0 right-0 lg:mb-[10.9%] lg:mr-[27.2%] mb-[85%] mr-[-27%]">
                         <Line id={"white_line_1"} color={"white"} primaryColor={"black"} />
                     </div>
-                    <div className="absolute top-0 right-0 lg:mt-[4.4%] lg:mr-[11.3%] mt-[16%] mr-[2.5%]">
-                        <Link href="#contact_section" scroll={false}>
+                    <div className="z-50 absolute top-0 right-0 lg:mt-[4.4%] lg:mr-[11.3%] mt-[16%] mr-[2.5%]">
+                        <Link href="#projects_section" scroll={false}>
                             <h3 id="contact" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[22px] font-akiraExpanded">
                                 Contact
                             </h3>
