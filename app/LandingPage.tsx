@@ -351,7 +351,7 @@ export default function LandingPage() {
                             ALL
                         </h2>
                     </div>
-                    <div id="keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 left-0 mt-[38%] ml-[16.7%]">
+                    <div id="keywords" className="lg:absolute hidden lg:flex lg:flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
                         <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             DEV
                         </h2>
@@ -362,7 +362,7 @@ export default function LandingPage() {
                             DEV
                         </h2>
                     </div>
-                    <div id="intro_keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 left-0 mt-[38%] ml-[16.7%]">
+                    <div id="intro_keywords" className="lg:absolute hidden lg:flex lg:flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
                         <h2 id="keyword_4" className="hidden z-20 bg-gradient-to-b from-[#991600] to-scarlet-red text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             SKILLS
                         </h2>
@@ -373,7 +373,7 @@ export default function LandingPage() {
                             SKILLS
                         </h2>
                     </div>
-                    <div id="projects_keywords" className="lg:absolute hidden lg:flex lg:flex-col top-0 left-0 mt-[38%] ml-[16.7%]">
+                    <div id="projects_keywords" className="lg:absolute hidden lg:flex lg:flex-col bottom-0 left-0 mb-[4.2%] ml-[16.7%]">
                         <h2 id="keyword_4" className="z-20 bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[82px] font-akiraExpanded mb-[-50px]" style={{ WebkitTextStroke: '1px transparent' }}>
                             PROJECTS
                         </h2>

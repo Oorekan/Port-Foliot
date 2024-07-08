@@ -626,7 +626,7 @@ export default function ScrollAnimation() {
             y: 0,
             opacity: 1,
             duration: 0.7
-        }, 0.3);
+        }, 0.2);
         tl_keywords_2.fromTo("#intro_keywords #keyword_3", {
             display: "none",
             y: -50,
@@ -646,7 +646,7 @@ export default function ScrollAnimation() {
             y: 0,
             opacity: 1,
             duration: 0.7
-        }, 0.6);
+        }, 0.3);
     })
 
     mm.add("(min-width: 768px)", () => {
@@ -711,7 +711,7 @@ export default function ScrollAnimation() {
             y: 0,
             opacity: 1,
             duration: 0.7
-        }, 0.3);
+        }, 0.2);
         tl_keywords_4.fromTo("#projects_keywords #keyword_3", {
             display: "none",
             y: -50,
@@ -731,7 +731,7 @@ export default function ScrollAnimation() {
             y: 0,
             opacity: 1,
             duration: 0.7
-        }, 0.6);
+        }, 0.3);
     });
 
     return () => {

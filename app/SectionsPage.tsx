@@ -46,7 +46,7 @@ export default function SectionsPage() {
     }, [])
     return (
         <>
-            <div id="page_layout">
+            <div id="page_layout" className="overflow-hidden">
                 <LandingPage />
                 <IntroductionPage />
                 <ProjectPage />
