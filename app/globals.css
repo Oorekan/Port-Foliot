@@ -35,14 +35,19 @@ body {
 canvas.webgl {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   #profile_picture {
-      width: 100% !important;
+      position: absolute;
+      width: 50% !important;
       height: auto !important;
-      bottom: 0;
   }
-} */
+  #threescene_wrapper {
+    display: flex;
+    justify-content: center;
+  }  
+}

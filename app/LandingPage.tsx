@@ -299,7 +299,7 @@ export default function LandingPage() {
         <section id="header_section" className="relative w-screen h-screen max-w-full overflow-hidden">
             <div id="background" className="fixed h-screen w-screen max-w-full overflow-hidden inset-0 bg-onyx-black bg-[url('../public/noisy-background.png')] bg-[size:5%_10%]">
                 <div id="white_grid" className="absolute inset-0 h-full w-full bg-transparent lg:bg-[linear-gradient(to_right,rgb(255,255,255,0.2),transparent_1px),linear-gradient(to_bottom,rgb(255,255,255,0.2),transparent_1px)] lg:bg-[size:5%_10%] bg-[linear-gradient(to_right,rgb(255,255,255,0.2),transparent_1px),linear-gradient(to_bottom,rgb(255,255,255,0.2),transparent_1px)] bg-[size:20%_10%]">
-                    <div className="absolute w-full h-full bottom-0 z-10">
+                    <div id="threescene_wrapper" className="absolute w-full h-full bottom-0 z-10">
                         <ThreeScene />
                     </div>
                     <div className="inline-block top-0 lg:left-0 lg:mt-[5.5%] lg:ml-[6.5%] mt-[45%] ml-[1%]">
