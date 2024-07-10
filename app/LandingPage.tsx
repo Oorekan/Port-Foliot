@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import LandingPicture from "@/public/portfolio-header-image-4 copie.png"
+import LandingPicture from "@/public/portfolio-header-image-4-copie.png"
 import CrescentMoon from "@/components/svg/CrescentMoon"
 import Amaryllis from "@/components/svg/Amaryllis"
 import Sparkles from "@/components/svg/Sparkles"
@@ -16,7 +16,7 @@ import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 import ScrollAnimation from "@/components/ScrollAnimation";
 
-// import Fake3DEffect from "@/components/Fake3DEffect"
+import ThreeScene from '../components/ThreeScene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -299,16 +299,8 @@ export default function LandingPage() {
         <section id="header_section" className="relative w-screen h-screen max-w-full overflow-hidden">
             <div id="background" className="fixed h-screen w-screen max-w-full overflow-hidden inset-0 bg-onyx-black bg-[url('../public/noisy-background.png')] bg-[size:5%_10%]">
                 <div id="white_grid" className="absolute inset-0 h-full w-full bg-transparent lg:bg-[linear-gradient(to_right,rgb(255,255,255,0.2),transparent_1px),linear-gradient(to_bottom,rgb(255,255,255,0.2),transparent_1px)] lg:bg-[size:5%_10%] bg-[linear-gradient(to_right,rgb(255,255,255,0.2),transparent_1px),linear-gradient(to_bottom,rgb(255,255,255,0.2),transparent_1px)] bg-[size:20%_10%]">
-                    <div className="absolute w-full bottom-0 z-10">
-                        <Image
-                            id="profile_picture"
-                            className="mx-auto"
-                            src={LandingPicture}
-                            width={0}
-                            height={0}
-                            alt="brandon-monge-picture">
-                        </Image>
-                        {/* <Fake3DEffect imageSrc={LandingPicture} /> */}
+                    <div className="absolute w-full h-full bottom-0 z-10">
+                        <ThreeScene />
                     </div>
                     <div className="inline-block top-0 lg:left-0 lg:mt-[5.5%] lg:ml-[6.5%] mt-[45%] ml-[1%]">
                         <h1 id="first_name" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text lg:text-[102px] text-[72px] font-japaneseRobot" style={{ WebkitTextStroke: '1px transparent' }}>

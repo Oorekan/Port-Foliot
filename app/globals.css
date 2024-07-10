@@ -30,4 +30,19 @@ body {
 .blockScroll {
   height: 100vh;
   overflow: hidden;
+}
+
+canvas.webgl {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* @media (max-width: 768px) {
+  #profile_picture {
+      width: 100% !important;
+      height: auto !important;
+      bottom: 0;
   }
+} */
