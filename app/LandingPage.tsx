@@ -1,10 +1,8 @@
 'use client'
 
 import { useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
-import LandingPicture from "@/public/portfolio-header-image-4-copie.png"
 import CrescentMoon from "@/components/svg/CrescentMoon"
 import Amaryllis from "@/components/svg/Amaryllis"
 import Sparkles from "@/components/svg/Sparkles"

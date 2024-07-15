@@ -418,28 +418,26 @@ export default function ScrollAnimation() {
     })
 
     tl_profile_picture.to("#profile_picture", {
-        y: "100%",
-        scale: 0,
+        opacity: 0,
         duration: 2,
         ease: "linear",
     })
 
     //* -------------------- PROJECTS PROFILE PICTURE TRANSITION ANIMATION -------------------- *//
-    let tl_projects_profile_picture = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#projects_section",
-            start: "top",
-            end: "bottom",
-            scrub: true,
-        },
-    })
+    // let tl_projects_profile_picture = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: "#projects_section",
+    //         start: "top",
+    //         end: "bottom",
+    //         scrub: true,
+    //     },
+    // })
 
-    tl_projects_profile_picture.to("#projects_picture", {
-        y: "0%",
-        scale: 1,
-        duration: 2,
-        ease: "linear"
-    })
+    // tl_projects_profile_picture.to("#profile_picture", {
+    //     opacity: 1,
+    //     duration: 2,
+    //     ease: "linear"
+    // })
 
     //* -------------------- JAPANESE WORD #1 COLOR TRANSITION ANIMATION -------------------- *//
     let tl_intro_japanese_word_1_color = gsap.timeline({

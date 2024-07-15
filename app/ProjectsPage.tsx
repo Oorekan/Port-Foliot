@@ -3,8 +3,8 @@
 import { useEffect } from "react"
 import Image from "next/image"
 
-import Project_Picture from "@/public/portfolio-header-image-2 copie.png"
-import FirstProject from "../public/securité-regie et copro.png"
+import Project_Picture from "../public/projects-image.png"
+import FirstProject from "../public/securité-regie-et-copro.png"
 import SecondProject from "../public/erik-mclean-9y1cTVKe1IY-unsplash.jpg"
 import ThirdProject from "../public/rse-hero-header-bg.png"
 
@@ -58,7 +58,7 @@ export default function ProjectPage() {
                 <div id="projects_container" className="relative w-full h-full">
                     <div id="projects_wrapper" className="relative w-full h-full">
                         <div className="absolute inset-0 h-full w-full">
-                            <div className="absolute w-full bottom-0">
+                            {/* <div className="absolute w-full bottom-0">
                                 <Image
                                     id="projects_picture"
                                     className="mx-auto"
@@ -67,7 +67,7 @@ export default function ProjectPage() {
                                     height={0}
                                     alt="projects-picture">
                                 </Image>
-                            </div>
+                            </div> */}
                             <div id="first-project-link" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[4.5%] lg:ml-[21.65%] mt-[40%] ml-[30%] overflow-hidden">
                                 <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
