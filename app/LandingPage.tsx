@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import CrescentMoon from "@/components/svg/CrescentMoon"
 import Amaryllis from "@/components/svg/Amaryllis"
@@ -14,13 +15,52 @@ import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 import ScrollAnimation from "@/components/ScrollAnimation";
 
-import ThreeScene from '../components/ThreeScene';
+// import ThreeScene from '../components/ThreeScene';
+import HeaderImage from '../public/port-foliot-header-image.png'
+import ProjectsImage from '../public/projects_image.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function LandingPage() {
+    const [imageUrls, setImageUrls] = useState(HeaderImage);
     useEffect(() => {
         ScrollAnimation();
+
+        let tl_header_image = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#intro_section",
+                end: "-=10%",
+                scrub: true,
+            },
+        })
+
+        tl_header_image.to("#header_image", {
+            opacity: 0,
+            duration: 2,
+            ease: "linear",
+            onUpdate: () => {
+                setImageUrls(HeaderImage);
+            }
+        })
+
+        let tl_projects_image = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#projects_section",
+                start: "top",
+                end: "bottom",
+                scrub: true,
+            },
+        });
+
+        tl_projects_image.to("#header_image", {
+            opacity: 1,
+            duration: 2,
+            ease: "linear",
+            onUpdate: () => {
+                setImageUrls(ProjectsImage);
+            }
+        });
+
         //*-------------------- WHITE GRID --------------------*//
         let tl_white_grid = gsap.timeline({
         })
@@ -175,13 +215,11 @@ export default function LandingPage() {
         }, ">-0.3")
         //* -------------------- PROFILE PICTURE -------------------- *//
         let tl_profile_picture = gsap.timeline({})
-        tl_profile_picture.fromTo("#profile_picture", {
-            y: '10%',
+        tl_profile_picture.fromTo("#header_image", {
             opacity: 0,
         }, {
-            y: '0%',
             opacity: 1,
-            duration: 0.7,
+            duration: 1.7,
             delay: 2
         })
         //* -------------------- RED AMARYLLIS -------------------- *//
@@ -297,8 +335,18 @@ export default function LandingPage() {
         <section id="header_section" className="relative w-screen h-screen max-w-full overflow-hidden">
             <div id="background" className="fixed h-screen w-screen max-w-full overflow-hidden inset-0 bg-onyx-black bg-[url('../public/noisy-background.png')] bg-[size:5%_10%]">
                 <div id="white_grid" className="absolute inset-0 h-full w-full bg-transparent lg:bg-[linear-gradient(to_right,rgb(255,255,255,0.2),transparent_1px),linear-gradient(to_bottom,rgb(255,255,255,0.2),transparent_1px)] lg:bg-[size:5%_10%] bg-[linear-gradient(to_right,rgb(255,255,255,0.2),transparent_1px),linear-gradient(to_bottom,rgb(255,255,255,0.2),transparent_1px)] bg-[size:20%_10%]">
-                    <div id="threescene_wrapper" className="absolute w-full h-full bottom-0 z-10">
+                    {/* <div id="threescene_wrapper" className="absolute w-full h-full bottom-0 z-10">
                         <ThreeScene />
+                    </div> */}
+                    <div className="absolute w-full bottom-0 z-[50]">
+                        <Image
+                            id="header_image"
+                            className="mx-auto"
+                            src={imageUrls}
+                            width={0}
+                            height={0}
+                            alt="brandon-monge-picture">
+                        </Image>
                     </div>
                     <div className="inline-block top-0 lg:left-0 lg:mt-[5.5%] lg:ml-[6.5%] mt-[45%] ml-[1%]">
                         <h1 id="first_name" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text lg:text-[102px] text-[72px] font-japaneseRobot" style={{ WebkitTextStroke: '1px transparent' }}>
@@ -382,7 +430,7 @@ export default function LandingPage() {
                             新月
                         </h2>
                     </div>
-                    <div className="absolute z-[-1] lg:top-0 right-0 bottom-0 lg:mt-[21%] lg:mr-[41.5%] mb-[50%] mr-[10%]">
+                    <div className="absolute z-[-1] lg:top-0 right-0 bottom-0 lg:mt-[14%] lg:mr-[39.5%] mb-[50%] mr-[10%]">
                         <CrescentMoon id={"crescent_moon"} gradientColor1={"#FF2400"} gradientColor2={"#991600"} stopColor={"red"} />
                     </div>
                     <div className="absolute top-0 left-0 lg:mt-[20.4%] lg:ml-[17.93%] mt-[22.5%] ml-[-10%]">
@@ -406,7 +454,7 @@ export default function LandingPage() {
                     <div className="absolute top-0 left-0 lg:mt-[5.2%] lg:ml-[72.2%] mt-[20%] ml-[23.75%]">
                         <ReverseDoubleLine id={"double_red_line_1"} color={"red"} primaryColor={"red"} />
                     </div>
-                    <div className="absolute lg:left-0 top-0 right-0 lg:mt-[27.67%] lg:ml-[37.2%] mt-[85%]">
+                    <div className="absolute lg:left-0 top-0 right-0 lg:mt-[24.67%] lg:ml-[38.2%] mt-[85%]">
                         <ReverseDoubleLine id={"double_red_line_2"} color={"red"} primaryColor={"black"} />
                     </div>
                     <div className="lg:block lg:absolute hidden bottom-0 left-0 mb-[4.8%] ml-[16.7%]">
@@ -415,7 +463,7 @@ export default function LandingPage() {
                     <div className="absolute bottom-0 right-0 lg:mb-[5.62%] lg:mr-[7.15%] mb-[21.5%] mr-[-16%]">
                         <DoubleLine id={"double_white_line_1"} color={"white"} primaryColor={"black"} />
                     </div>
-                    <div className="lg:block lg:absolute hidden bottom-0 right-0 mb-[22.48%] mr-[32.2%]">
+                    <div className="lg:block lg:absolute hidden bottom-0 right-0 mb-[19.48%] mr-[33.2%]">
                         <DoubleLine id={"double_white_line_2"} color={"white"} primaryColor={"black"} />
                     </div>
                     <div className="absolute bottom-0 left-0 lg:mb-[22.1%] ml-[0%] mb-[20%]">

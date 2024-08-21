@@ -1,12 +1,12 @@
 'use client'
 
+// import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollAnimation() {
-
     //* -------------------- BACKGROUND COLOR TRANSITION ANIMATION -------------------- *//
     let tl_intro_bg_color = gsap.timeline({
         scrollTrigger: {
@@ -409,19 +409,19 @@ export default function ScrollAnimation() {
     })
 
     //* -------------------- PROFILE PICTURE TRANSITION ANIMATION -------------------- *//
-    let tl_profile_picture = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#intro_section",
-            end: "-=10%",
-            scrub: true,
-        },
-    })
+    // let tl_profile_picture = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: "#intro_section",
+    //         end: "-=10%",
+    //         scrub: true,
+    //     },
+    // })
 
-    tl_profile_picture.to("#profile_picture", {
-        opacity: 0,
-        duration: 2,
-        ease: "linear",
-    })
+    // tl_profile_picture.to("#profile_picture", {
+    //     opacity: 0,
+    //     duration: 2,
+    //     ease: "linear",
+    // })
 
     //* -------------------- PROJECTS PROFILE PICTURE TRANSITION ANIMATION -------------------- *//
     // let tl_projects_profile_picture = gsap.timeline({

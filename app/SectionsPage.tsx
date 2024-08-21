@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
 import LandingPage from "./LandingPage";
+import MyselfSection from "./MyselfSection";
 import IntroductionPage from "./IntroductionPage";
 import ProjectPage from "./ProjectsPage";
 
@@ -48,6 +49,7 @@ export default function SectionsPage() {
         <>
             <div id="page_layout" className="overflow-hidden">
                 <LandingPage />
+                <MyselfSection />
                 <IntroductionPage />
                 <ProjectPage />
             </div>

@@ -56,12 +56,21 @@ export default function IntroductionPage() {
                     pinType: "fixed"
                 }
             })
+            // tl_default.fromTo("#intro_paragraph", {
+            //     scrollTrigger: {
+            //         trigger: "#intro_section",
+            //         scrub: 1,
+            //     },
+            //     opacity: 0,
+            // }, {
+            //     opacity: 1,
+            // })
             tl_default.to("#cards", {
                 scrollTrigger: {
                     trigger: "#intro_section",
                     scrub: 1,
                 },
-                x: "-200vw",
+                x: "-100%",
             })
         });
 
@@ -79,7 +88,7 @@ export default function IntroductionPage() {
                 }
             })
             tl_default_small.to("#cards", {
-                x: "-500%",
+                x: "-100%",
             })
         });
 
@@ -88,11 +97,14 @@ export default function IntroductionPage() {
         };
     }, [])
     return (
-        <section id="intro_section" className="relative lg:w-[400vw] w-screen h-screen overflow-hidden">
+        <section id="intro_section" className="relative w-screen h-screen overflow-hidden">
             <div id="intro_container" className="relative w-full h-full">
                 <div id="intro_wrapper" className="relative w-full h-full">
-                    <div id="cards" className="relative lg:w-full h-full flex gap-14 lg:justify-center items-center left-[50%] lg:right-0 lg:left-0">
-                        {Card_Info.map((el, index) => <Card key={index} title={el.title} image={el.image} elements={el.elements} />)}
+                    <div className="relative w-full h-full flex items-center">
+                        <div id="cards" className="relative lg:w-full h-full flex gap-14 lg:justify-center items-center left-[100%] lg:right-0">
+                            {/* <div id="cards" className="relative w-1/2 flex gap-14 items-center"> */}
+                            {Card_Info.map((el, index) => <Card key={index} title={el.title} image={el.image} elements={el.elements} />)}
+                        </div>
                     </div>
                 </div>
             </div>
