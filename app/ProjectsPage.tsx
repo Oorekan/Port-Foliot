@@ -4,16 +4,16 @@ import { useEffect } from "react"
 import Image from "next/image"
 
 // import Project_Picture from "../public/projects-image.png"
-import FirstProjectImage from "../public/ypsilon-homepage-image-2.png"
-import FirstProjectSecondImage from "../public/nos-solutions-techniques-1.png"
+import FirstProjectImage from "../public/securité-regie-et-copro.png"
+import FirstProjectSecondImage from "../public/video-camera-ypsilon.png"
 // import FirstProjectLogo from "../public/ypsilon-logo.png"
 
-import SecondProjectImage from "../public/kbox-homepage-image.png"
-import SecondProjectSecondImage from "../public/havana-2.jpg"
+import SecondProjectImage from "../public/StudioToniR-033.jpg"
+import SecondProjectSecondImage from "../public/soirees-professionnelles-header-image.jpg"
 // import SecondProjectLogo from "../public/Logo.png"
 
-import ThirdProjectImage from "../public/ingeva-homepage-image.png"
-import ThirdProjectSecondImage from "../public/expertises-hero-header-bg.jpeg"
+import ThirdProjectImage from "../public/train-cover.jpg"
+import ThirdProjectSecondImage from "../public/rse-hero-header-bg.png"
 // import ThirdProjectLogo from "../public/logo-ingeva-favicon.png"
 
 import { gsap } from 'gsap';

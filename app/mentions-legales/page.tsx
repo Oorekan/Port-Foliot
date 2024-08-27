@@ -239,7 +239,7 @@ export default function Page() {
                             <Link href="/">
                                 <CrescentMoon id={"crescent_moon"} gradientColor1={"#FF2400"} gradientColor2={"#991600"} stopColor={"red"} />
                             </Link>
-                            <Link href="#contact_section" scroll={false}>
+                            <Link href="#contact_container" scroll={true}>
                                 <h3 id="contact" className="inline-block text-2xl text-transparent bg-clip-text font-akiraExpanded bg-gradient-to-b from-[#991600] to-scarlet-red">
                                     Contact
                                 </h3>

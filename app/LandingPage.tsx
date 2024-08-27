@@ -66,120 +66,146 @@ export default function LandingPage() {
         })
         tl_white_grid.fromTo("#white_grid", {
             opacity: 0,
+            display: "none"
         }, {
             opacity: 1,
             duration: 2,
+            display: "block",
             ease: "expo.in"
         })
         //* -------------------- KEYWORDS 1 -------------------- *//
         let tl_keywords_1 = gsap.timeline({})
         tl_keywords_1.fromTo("#keyword_1", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
         tl_keywords_1.fromTo("#keyword_2", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.7,
+            display: "block",
+            duration: 0.7
         }, ">-0.3")
         tl_keywords_1.fromTo("#keyword_3", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7
         }, ">-0.3")
         //* -------------------- KEYWORDS 2 -------------------- *//
         let tl_keywords_2 = gsap.timeline({})
         tl_keywords_2.fromTo("#keyword_4", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
         tl_keywords_2.fromTo("#keyword_5", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.7,
+            display: "block",
+            duration: 0.7
         }, ">-0.3")
         tl_keywords_2.fromTo("#keyword_6", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.7,
+            display: "block",
+            duration: 0.7
         }, ">-0.3")
         //* -------------------- JAPANESE WORDS -------------------- *//
         let tl_japanese_word = gsap.timeline({})
         tl_japanese_word.fromTo("#japanese_word_1", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
         tl_japanese_word.fromTo("#japanese_word_2", {
             y: -50,
-            opacity: 0
+            opacity: 0,
+            display: "none"
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.7,
+            display: "block",
+            duration: 0.7
         }, ">-0.3")
         //* -------------------- RED LINES -------------------- *//
         let tl_red_lines = gsap.timeline({})
         tl_red_lines.fromTo("#double_red_line_1", {
             opacity: 0,
+            display: "none",
             scaleX: 0,
             transformOrigin: "right center"
         }, {
             opacity: 1,
+            display: "block",
             scaleX: 1,
             duration: 0.7,
             delay: 2
         })
         tl_red_lines.fromTo("#double_red_line_2", {
             opacity: 0,
+            display: "none",
             scaleX: 0,
             transformOrigin: "right center"
         }, {
             opacity: 1,
+            display: "block",
             scaleX: 1,
             duration: 0.7
         }, ">-0.3")
         tl_red_lines.fromTo("#double_red_line_3", {
             opacity: 0,
+            display: "none",
             scaleX: 0,
             transformOrigin: "left center"
         }, {
             opacity: 1,
+            display: "block",
             scaleX: 1,
             duration: 0.7
         }, ">-0.3")
         tl_red_lines.fromTo("#red_line_1", {
             opacity: 0,
+            display: "none",
             scaleX: 0,
             transformOrigin: "left center"
         }, {
             opacity: 1,
+            display: "block",
             scaleX: 1,
             duration: 0.7
         }, ">-0.3")
@@ -187,29 +213,35 @@ export default function LandingPage() {
         let tl_white_lines = gsap.timeline({})
         tl_white_lines.fromTo("#double_white_line_1", {
             opacity: 0,
+            display: "none",
             scaleX: 0,
             transformOrigin: "left center"
         }, {
             opacity: 1,
+            display: "block",
             scaleX: 1,
             duration: 0.7,
             delay: 2
         })
         tl_white_lines.fromTo("#double_white_line_2", {
             opacity: 0,
+            display: "none",
             scaleX: 0,
             transformOrigin: "left center"
         }, {
             opacity: 1,
+            display: "block",
             scaleX: 1,
             duration: 0.7
         }, ">-0.3")
         tl_white_lines.fromTo("#white_line_1", {
             opacity: 0,
+            display: "none",
             scaleX: 0,
             transformOrigin: "left center"
         }, {
             opacity: 1,
+            display: "block",
             scaleX: 1,
             duration: 0.7
         }, ">-0.3")
@@ -217,8 +249,10 @@ export default function LandingPage() {
         let tl_profile_picture = gsap.timeline({})
         tl_profile_picture.fromTo("#header_image", {
             opacity: 0,
+            display: "none"
         }, {
             opacity: 1,
+            display: "block",
             duration: 1.7,
             delay: 2
         })
@@ -227,18 +261,22 @@ export default function LandingPage() {
         tl_red_amaryllis.fromTo("#red_amaryllis_1", {
             rotate: 50,
             opacity: 0,
+            display: "none"
         }, {
             rotate: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
         tl_red_amaryllis.fromTo("#red_amaryllis_2", {
             rotate: 50,
             opacity: 0,
+            display: "none"
         }, {
             rotate: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
         }, ">-0.3")
         //* -------------------- WHITE AMARYLLIS -------------------- *//
@@ -246,9 +284,11 @@ export default function LandingPage() {
         tl_white_amaryllis.fromTo("#white_amaryllis_1", {
             rotate: 50,
             opacity: 0,
+            display: "none"
         }, {
             rotate: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2.6
         })
@@ -257,9 +297,11 @@ export default function LandingPage() {
         tl_crescent_moon.fromTo("#crescent_moon", {
             y: '-15%',
             opacity: 0,
+            display: "none"
         }, {
             y: '0%',
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
@@ -268,28 +310,34 @@ export default function LandingPage() {
         tl_white_sparkles.fromTo("#white_sparkle_1", {
             rotate: -50,
             opacity: 0,
+            display: "none"
         }, {
             rotate: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
         tl_white_sparkles.fromTo("#white_sparkle_2", {
             rotate: -50,
             opacity: 0,
+            display: "none"
         }, {
             rotate: 0,
             opacity: 1,
-            duration: 0.7,
+            display: "block",
+            duration: 0.7
         }, ">-0.3")
         //* -------------------- RED SPARKLES -------------------- *//
         let tl_red_sparkles = gsap.timeline({})
         tl_red_sparkles.fromTo("#red_sparkle_1", {
             rotate: -50,
             opacity: 0,
+            display: "none"
         }, {
             rotate: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
@@ -298,9 +346,11 @@ export default function LandingPage() {
         tl_contact.fromTo("#contact", {
             x: 20,
             opacity: 0,
+            display: "none"
         }, {
             x: 0,
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
@@ -309,18 +359,22 @@ export default function LandingPage() {
         tl_names.fromTo("#first_name", {
             y: '10%',
             opacity: 0,
+            display: "none"
         }, {
             y: '0%',
             opacity: 1,
+            display: "block",
             duration: 0.7,
             delay: 2
         })
         tl_names.fromTo("#last_name", {
             y: '10%',
             opacity: 0,
+            display: "none"
         }, {
             y: '0%',
             opacity: 1,
+            display: "block",
             duration: 0.7,
         }, ">-0.3")
         tl_names.eventCallback("onComplete", () => {
@@ -451,9 +505,6 @@ export default function LandingPage() {
                     <div className="lg:block lg:absolute hidden top-0 left-0 mt-[4.32%] ml-[33.72%]">
                         <Sparkles id={"white_sparkle_2"} gradientColor1={"#999999"} gradientColor2={"white"} stopColor={"white"} />
                     </div>
-                    <div className="absolute top-0 left-0 lg:mt-[5.2%] lg:ml-[72.2%] mt-[20%] ml-[23.75%]">
-                        <ReverseDoubleLine id={"double_red_line_1"} color={"red"} primaryColor={"red"} />
-                    </div>
                     <div className="absolute lg:left-0 top-0 right-0 lg:mt-[24.67%] lg:ml-[38.2%] mt-[85%]">
                         <ReverseDoubleLine id={"double_red_line_2"} color={"red"} primaryColor={"black"} />
                     </div>
@@ -472,15 +523,20 @@ export default function LandingPage() {
                     <div className="absolute bottom-0 right-0 lg:mb-[10.9%] lg:mr-[27.2%] mb-[85%] mr-[-27%]">
                         <Line id={"white_line_1"} color={"white"} primaryColor={"black"} />
                     </div>
-                    <div className="z-50 absolute top-0 right-0 lg:mt-[4.4%] lg:mr-[11.3%] mt-[16%] mr-[2.5%]">
-                        <Link href="#projects_section" scroll={false}>
-                            <h3 id="contact" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[22px] font-akiraExpanded">
-                                Contact
-                            </h3>
-                        </Link>
-                    </div>
                 </div>
             </div >
+            <div className="fixed z-10 flex items-center gap-6 top-0 left-0 lg:mt-[4.5%] lg:ml-[70.2%] mt-[20%] ml-[33.75%]">
+                <div>
+                    <ReverseDoubleLine id={"double_red_line_1"} color={"red"} primaryColor={"red"} />
+                </div>
+                <div className="relative">
+                    <Link href="/contact">
+                        <h4 id="contact" className="bg-gradient-to-b from-[#991600] to-scarlet-red inline-block text-transparent bg-clip-text text-[22px] font-akiraExpanded">
+                            Contact
+                        </h4>
+                    </Link>
+                </div>
+            </div>
         </section >
     );
 }
