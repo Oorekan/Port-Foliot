@@ -154,7 +154,7 @@ export default function ProjectPage() {
 
                             {/* SECOND PROJECT */}
                             <div id="second_project_image" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[21.5%] lg:ml-[9.2%] mt-[80%] ml-[5%] overflow-hidden">
-                                <a target="_blank" href="https://kbox-preprod.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.karaokelyon.com/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={SecondProjectImage} alt="second-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
@@ -164,7 +164,7 @@ export default function ProjectPage() {
                                 </a>
                             </div>
                             {/* <div id="second_project_logo" className="hidden lg:block group z-10 absolute w-[128px] h-[128px] rounded-[30px] top-0 left-0 mt-[30%] ml-[7%] overflow-hidden">
-                                <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.karaokelyon.com/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={SecondProjectLogo} alt="first-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
@@ -172,7 +172,7 @@ export default function ProjectPage() {
                                 </a>
                             </div> */}
                             <div id="second_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] top-0 left-0 mt-[19%] ml-[23%] overflow-hidden">
-                                <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.karaokelyon.com/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={SecondProjectSecondImage} alt="first-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
@@ -192,7 +192,7 @@ export default function ProjectPage() {
                                 </a>
                             </div>
                             {/* <div id="third_project_logo" className="hidden lg:block group z-10 absolute w-auto h-[128px] rounded-[30px] bottom-0 right-0 mb-[14%] mr-[37%] overflow-hidden">
-                                <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.ingeva.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={ThirdProjectLogo} alt="first-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
@@ -200,7 +200,7 @@ export default function ProjectPage() {
                                 </a>
                             </div> */}
                             <div id="third_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] bottom-0 right-0 mb-[5%] mr-[10%] overflow-hidden">
-                                <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.ingeva.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={ThirdProjectSecondImage} alt="first-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
