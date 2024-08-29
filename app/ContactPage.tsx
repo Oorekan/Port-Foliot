@@ -47,6 +47,10 @@ export default function Contact() {
                                 <a id="contact_instagram_link" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white" href='https://www.instagram.com/brand_mng/' target='_blank'>
                                     Instagram
                                 </a>
+                                <div className='lg:block hidden w-[10px] h-[10px] bg-gradient-to-b from-[#999999] to-white rounded-full'></div>
+                                <a id="contact_cv_link" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white" href='https://drive.google.com/file/d/1U94penksZtNH0gM9bF-tvkP8zMTUpC-0/view?usp=sharing' target='_blank'>
+                                    C.V.
+                                </a>
                             </div>
                             <Link href="/mentions-legales">
                                 <h4 id="contact_terms_of_use" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white">
