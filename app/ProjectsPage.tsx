@@ -126,7 +126,7 @@ export default function ProjectPage() {
 
                             {/* FIRST PROJECT */}
                             <div id="first_project_image" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[4.5%] lg:ml-[21.65%] mt-[40%] ml-[30%] overflow-hidden">
-                                <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.ypsilon-securite.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={FirstProjectImage} alt="first-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
@@ -136,7 +136,7 @@ export default function ProjectPage() {
                                 </a>
                             </div>
                             {/* <div id="first_project_logo" className="hidden lg:block group z-10 absolute w-[128px] h-[128px] rounded-[100%] top-0 left-0 mt-[2%] ml-[17%] overflow-hidden">
-                                <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.ypsilon-securite.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={FirstProjectLogo} alt="first-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
@@ -144,7 +144,7 @@ export default function ProjectPage() {
                                 </a>
                             </div> */}
                             <div id="first_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] top-0 left-0 mt-[9%] ml-[45%] overflow-hidden">
-                                <a target="_blank" href="https://ypsilon-64fba2.webflow.io/" rel="noopener noreferrer">
+                                <a target="_blank" href="https://www.ypsilon-securite.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={FirstProjectSecondImage} alt="first-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>

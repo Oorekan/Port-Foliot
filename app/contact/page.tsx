@@ -296,6 +296,12 @@ export default function Page() {
                                                 Instagram
                                             </a>
                                         </div>
+                                        <div className='lg:block hidden w-[10px] h-[10px] bg-gradient-to-b from-[#999999] to-white rounded-full'></div>
+                                        <div>
+                                            <a id="contact_cv_link" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white" href='https://drive.google.com/file/d/1U94penksZtNH0gM9bF-tvkP8zMTUpC-0/view?usp=sharing' target='_blank'>
+                                                CV
+                                            </a>
+                                        </div>
                                     </div>
                                     <h4 className="inline-block text-[22px] text-transparent bg-clip-text font-akiraExpanded bg-gradient-to-b from-[#999999] to-white lg:hover:text-white">
                                         <Link href="/">
