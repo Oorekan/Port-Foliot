@@ -4,17 +4,20 @@ import { useEffect } from "react"
 import Image from "next/image"
 
 // import Project_Picture from "../public/projects-image.png"
-import FirstProjectImage from "../public/securité-regie-et-copro.png"
-import FirstProjectSecondImage from "../public/video-camera-ypsilon.png"
-// import FirstProjectLogo from "../public/ypsilon-logo.png"
+import FirstProjectImage from "../public/video-camera-ypsilon.png"
+import FirstProjectSecondImage from "../public/securité-regie-et-copro.png"
 
 import SecondProjectImage from "../public/StudioToniR-033.jpg"
 import SecondProjectSecondImage from "../public/soirees-professionnelles-header-image.jpg"
-// import SecondProjectLogo from "../public/Logo.png"
 
 import ThirdProjectImage from "../public/train-cover.jpg"
 import ThirdProjectSecondImage from "../public/rse-hero-header-bg.png"
-// import ThirdProjectLogo from "../public/logo-ingeva-favicon.png"
+
+import FourthProjectImage from "../public/la-revolution-des-entretiens.jpg"
+import FourthProjectSecondImage from "../public/proxima-card.png"
+
+import FifthProjectImage from "../public/nsbiotech-carriere.webp"
+import FifthProjectSecondImage from "../public/salon-etudiant.jpg"
 
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
@@ -42,13 +45,6 @@ export default function ProjectPage() {
             y: 0,
             opacity: 1,
         })
-        // tl_projects_links.fromTo("#first_project_logo", {
-        //     x: -50,
-        //     opacity: 0
-        // }, {
-        //     x: 0,
-        //     opacity: 1,
-        // }, 0.3)
         tl_projects_links.fromTo("#first_project_second_image", {
             y: 120,
             opacity: 0
@@ -64,13 +60,6 @@ export default function ProjectPage() {
             y: 0,
             opacity: 1,
         }, 0)
-        // tl_projects_links.fromTo("#second_project_logo", {
-        //     y: 150,
-        //     opacity: 0
-        // }, {
-        //     y: 0,
-        //     opacity: 1,
-        // }, 0.3)
         tl_projects_links.fromTo("#second_project_second_image", {
             y: -60,
             opacity: 0
@@ -86,15 +75,38 @@ export default function ProjectPage() {
             y: 0,
             opacity: 1,
         }, 0)
-        // tl_projects_links.fromTo("#third_project_logo", {
-        //     x: -50,
-        //     opacity: 0
-        // }, {
-        //     x: 0,
-        //     opacity: 1,
-        // }, 0.3)
         tl_projects_links.fromTo("#third_project_second_image", {
             x: 60,
+            opacity: 0
+        }, {
+            x: 0,
+            opacity: 1,
+        }, 0.6)
+
+        tl_projects_links.fromTo("#fourth_project_image", {
+            y: 700,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+        }, 0)
+        tl_projects_links.fromTo("#fourth_project_second_image", {
+            y: -45,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+        }, 0.6)
+
+        tl_projects_links.fromTo("#fifth_project_image", {
+            y: 500,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+        }, 0)
+        tl_projects_links.fromTo("#fifth_project_second_image", {
+            x: -25,
             opacity: 0
         }, {
             x: 0,
@@ -125,7 +137,7 @@ export default function ProjectPage() {
                             </div> */}
 
                             {/* FIRST PROJECT */}
-                            <div id="first_project_image" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[4.5%] lg:ml-[21.65%] mt-[40%] ml-[30%] overflow-hidden">
+                            <div id="first_project_image" className="group z-10 absolute lg:w-[412px] lg:h-[256px] w-[156px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[4.5%] lg:ml-[21.65%] mt-[40%] ml-[12%] overflow-hidden">
                                 <a target="_blank" href="https://www.ypsilon-securite.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={FirstProjectImage} alt="first-project-picture" />
@@ -135,15 +147,7 @@ export default function ProjectPage() {
                                     </div>
                                 </a>
                             </div>
-                            {/* <div id="first_project_logo" className="hidden lg:block group z-10 absolute w-[128px] h-[128px] rounded-[100%] top-0 left-0 mt-[2%] ml-[17%] overflow-hidden">
-                                <a target="_blank" href="https://www.ypsilon-securite.fr/" rel="noopener noreferrer">
-                                    <div className="relative w-full h-full">
-                                        <Image className="w-full h-full object-cover" src={FirstProjectLogo} alt="first-project-picture" />
-                                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
-                                    </div>
-                                </a>
-                            </div> */}
-                            <div id="first_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] top-0 left-0 mt-[9%] ml-[45%] overflow-hidden">
+                            <div id="first_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] top-0 left-0 mt-[7%] ml-[40%] overflow-hidden">
                                 <a target="_blank" href="https://www.ypsilon-securite.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={FirstProjectSecondImage} alt="first-project-picture" />
@@ -153,7 +157,7 @@ export default function ProjectPage() {
                             </div>
 
                             {/* SECOND PROJECT */}
-                            <div id="second_project_image" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[21.5%] lg:ml-[9.2%] mt-[80%] ml-[5%] overflow-hidden">
+                            <div id="second_project_image" className="group z-10 absolute lg:w-[412px] lg:h-[256px] w-[156px] h-[128px] rounded-[30px] top-0 left-0 lg:mt-[21.5%] lg:ml-[7%] mt-[80%] ml-[5%] overflow-hidden">
                                 <a target="_blank" href="https://www.karaokelyon.com/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={SecondProjectImage} alt="second-project-picture" />
@@ -163,25 +167,17 @@ export default function ProjectPage() {
                                     </div>
                                 </a>
                             </div>
-                            {/* <div id="second_project_logo" className="hidden lg:block group z-10 absolute w-[128px] h-[128px] rounded-[30px] top-0 left-0 mt-[30%] ml-[7%] overflow-hidden">
+                            <div id="second_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] top-0 left-0 mt-[32%] ml-[5%] overflow-hidden">
                                 <a target="_blank" href="https://www.karaokelyon.com/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
-                                        <Image className="w-full h-full object-cover" src={SecondProjectLogo} alt="first-project-picture" />
-                                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
-                                    </div>
-                                </a>
-                            </div> */}
-                            <div id="second_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] top-0 left-0 mt-[19%] ml-[23%] overflow-hidden">
-                                <a target="_blank" href="https://www.karaokelyon.com/" rel="noopener noreferrer">
-                                    <div className="relative w-full h-full">
-                                        <Image className="w-full h-full object-cover" src={SecondProjectSecondImage} alt="first-project-picture" />
+                                        <Image className="w-full h-full object-cover" src={SecondProjectSecondImage} alt="second-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
                                     </div>
                                 </a>
                             </div>
 
                             {/* THIRD PROJECT  */}
-                            <div id="third_project_image" className="group z-10 absolute lg:w-[512px] lg:h-[256px] w-[256px] h-[128px] rounded-[30px] bottom-0 right-0 lg:mb-[4.5%] lg:mr-[14.3%] mb-[60%] mr-[5%] overflow-hidden">
+                            <div id="third_project_image" className="group z-10 absolute lg:w-[412px] lg:h-[256px] w-[156px] h-[128px] rounded-[30px] bottom-0 left-0 lg:mb-[4.5%] lg:ml-[32%] mb-[70%] ml-[20%] overflow-hidden">
                                 <a target="_blank" href="https://www.ingeva.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
                                         <Image className="w-full h-full object-cover" src={ThirdProjectImage} alt="third-project-picture" />
@@ -191,18 +187,50 @@ export default function ProjectPage() {
                                     </div>
                                 </a>
                             </div>
-                            {/* <div id="third_project_logo" className="hidden lg:block group z-10 absolute w-auto h-[128px] rounded-[30px] bottom-0 right-0 mb-[14%] mr-[37%] overflow-hidden">
+                            <div id="third_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] bottom-0 left-0 mb-[3%] ml-[50%] overflow-hidden">
                                 <a target="_blank" href="https://www.ingeva.fr/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
-                                        <Image className="w-full h-full object-cover" src={ThirdProjectLogo} alt="first-project-picture" />
+                                        <Image className="w-full h-full object-cover" src={ThirdProjectSecondImage} alt="third-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
                                     </div>
                                 </a>
-                            </div> */}
-                            <div id="third_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] bottom-0 right-0 mb-[5%] mr-[10%] overflow-hidden">
-                                <a target="_blank" href="https://www.ingeva.fr/" rel="noopener noreferrer">
+                            </div>
+
+                            {/* FOURTH PROJECT  */}
+                            <div id="fourth_project_image" className="group z-10 absolute lg:w-[412px] lg:h-[256px] w-[156px] h-[128px] rounded-[30px] top-0 right-0 lg:mt-[15%] lg:mr-[12%] mt-[30%] mr-[7%] overflow-hidden">
+                                <a target="_blank" href="https://www.proxima-recrutement.com/" rel="noopener noreferrer">
                                     <div className="relative w-full h-full">
-                                        <Image className="w-full h-full object-cover" src={ThirdProjectSecondImage} alt="first-project-picture" />
+                                        <Image className="w-full h-full object-cover" src={FourthProjectImage} alt="fourth-project-picture" />
+                                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                            <span className="text-white text-[32px] font-akiraExpanded">PROXIMA</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="fourth_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] top-0 right-0 mt-[13%] mr-[29%] overflow-hidden">
+                                <a target="_blank" href="https://www.proxima-recrutement.com/" rel="noopener noreferrer">
+                                    <div className="relative w-full h-full">
+                                        <Image className="w-full h-full object-cover" src={FourthProjectSecondImage} alt="fourth-project-picture" />
+                                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            {/* FIFTH PROJECT  */}
+                            <div id="fifth_project_image" className="group z-10 absolute lg:w-[412px] lg:h-[256px] w-[156px] h-[128px] rounded-[30px] bottom-0 right-0 lg:mb-[8%] lg:mr-[9%] mb-[100%] mr-[7%] overflow-hidden">
+                                <a target="_blank" href="https://www.nsbiotech.fr/" rel="noopener noreferrer">
+                                    <div className="relative w-full h-full">
+                                        <Image className="w-full h-full object-cover" src={FifthProjectImage} alt="fifth-project-picture" />
+                                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                                            <span className="text-white text-[32px] font-akiraExpanded">NS BIOTECH</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="fifth_project_second_image" className="hidden lg:block group z-10 absolute w-[192px] h-[128px] rounded-[30px] bottom-0 right-0 mb-[13%] mr-[2%] overflow-hidden">
+                                <a target="_blank" href="https://www.nsbiotech.fr/" rel="noopener noreferrer">
+                                    <div className="relative w-full h-full">
+                                        <Image className="w-full h-full object-cover" src={FifthProjectSecondImage} alt="fifth-project-picture" />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300"></div>
                                     </div>
                                 </a>

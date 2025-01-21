@@ -298,7 +298,7 @@ export default function Page() {
                                         </div>
                                         <div className='lg:block hidden w-[10px] h-[10px] bg-gradient-to-b from-[#999999] to-white rounded-full'></div>
                                         <div>
-                                            <a id="contact_cv_link" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white" href='https://drive.google.com/file/d/1U94penksZtNH0gM9bF-tvkP8zMTUpC-0/view?usp=sharing' target='_blank'>
+                                            <a id="contact_cv_link" className="inline-block text-[22px] font-akiraExpanded bg-gradient-to-b from-[#999999] to-white text-transparent bg-clip-text hover:text-white" href='https://drive.google.com/file/d/1-YfO7nBcUjoRua1dq_iVyGF3SvtOd0Ad/view?usp=sharing' target='_blank'>
                                                 CV
                                             </a>
                                         </div>
